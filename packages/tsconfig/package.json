@@ -1,0 +1,13 @@
+{
+	"name": "@des-front/tsconfig",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"format": "npm run format:prettier",
+		"format:prettier": "npm run lint:prettier -- --write",
+		"lint": "npm run lint:prettier",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+		"clean": "rimraf .turbo dist node_modules",
+		"debug:prettier": "prettier \"./tsconfig.base.json\" --loglevel debug"
+	}
+}

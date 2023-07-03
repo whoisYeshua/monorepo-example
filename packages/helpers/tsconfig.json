@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@*": ["./src/*"]
+		}
+	},
+	"extends": "@des-front/tsconfig/tsconfig.base.json"
+}

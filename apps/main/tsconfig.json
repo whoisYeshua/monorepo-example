@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"baseUrl": "src",
+		"paths": {
+			"$*": ["*"]
+		}
+	},
+	"extends": "@des-front/tsconfig/tsconfig.base.json",
+	"exclude": ["node_modules"]
+}

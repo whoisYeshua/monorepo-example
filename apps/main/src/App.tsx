@@ -1,0 +1,43 @@
+import { useState } from 'react'
+import { Center, Flex, Title } from '@mantine/core'
+
+import { BulletList, Button } from '@des-front/ui'
+
+import { NumberInput } from '$components'
+
+const App = () => {
+	const [count, setCount] = useState(1)
+
+	const handleClick = () => {
+		setCount(prev => ++prev)
+	}
+
+	const list = [
+		'Andy',
+		'Bobby',
+		'Ash',
+		'Braun',
+		'Ciri',
+		'Yanix',
+		'Zod',
+		'Geralt',
+		'Grimm',
+		'Skrillx',
+		'Marsh',
+	]
+
+	return (
+		<Center inline={false}>
+			<Flex gap="md" justify="center" align="center" direction="column">
+				<Title order={1}>Main app</Title>
+				<Button onClick={handleClick}>Count: {count}</Button>
+				<NumberInput />
+				<div>
+					<BulletList list={list} />
+				</div>
+			</Flex>
+		</Center>
+	)
+}
+
+export default App

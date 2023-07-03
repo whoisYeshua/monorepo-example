@@ -1,0 +1,3 @@
+{
+	"extends": "@des-front/tsconfig/tsconfig.base.json"
+}

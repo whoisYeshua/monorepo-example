@@ -1,0 +1,27 @@
+{
+	"name": "@des-front/helpers",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./src/index.ts",
+	"scripts": {
+		"format": "npm run format:eslint && npm run format:prettier",
+		"format:eslint": "npm run lint:eslint -- --fix",
+		"format:prettier": "npm run lint:prettier -- --write",
+		"lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts",
+		"lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+		"lint:ts": "tsc --noEmit",
+		"clean": "rimraf .turbo dist node_modules",
+		"debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
+		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug",
+		"debug:ts": "tsc --showConfig"
+	},
+	"dependencies": {
+		"ramda": "0.29.0"
+	},
+	"devDependencies": {
+		"@des-front/eslint-config": "*",
+		"@des-front/tsconfig": "*",
+		"@types/ramda": "0.29.3"
+	}
+}
