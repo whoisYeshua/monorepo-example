@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Center, Flex, Title } from '@mantine/core'
-
-import { BulletList, Button } from '@des-front/ui'
+import { Button, BulletList } from '@des-front/ui'
 
 import { NumberInput } from '$components'
 

@@ -1,5 +1,4 @@
 import { List } from '@mantine/core'
-
 import { groupList } from '@des-front/helpers'
 
 interface BulletListProps {

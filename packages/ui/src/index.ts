@@ -1,2 +1,2 @@
-export * from './Button'
-export * from './BulletList'
+export * from './atoms'
+export * from './molecules'

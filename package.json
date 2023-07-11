@@ -21,7 +21,7 @@
 		"lint": "turbo run lint --parallel",
 		"lint:eslint": "turbo run lint:eslint",
 		"lint:prettier": "turbo run lint:prettier",
-		"lint:ts": "turbo run lint:ts",
+		"lint:ts": "turbo run lint:ts --parallel",
 		"clean": "turbo run clean && rimraf node_modules",
 		"graph:build": "turbo run build --graph=build.graph.png",
 		"graph:dev": "turbo run dev --graph=dev.graph.png",
@@ -36,7 +36,7 @@
 		"prettier": "2.8.8",
 		"rimraf": "5.0.1",
 		"turbo": "1.10.7",
-		"typescript": "4.9.5"
+		"typescript": "5.1.6"
 	},
 	"packageManager": "npm@8.19.4"
 }

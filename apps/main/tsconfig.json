@@ -2,9 +2,8 @@
 	"compilerOptions": {
 		"baseUrl": "src",
 		"paths": {
-			"$*": ["*"]
+			"$*": ["*", "../../../packages/ui/src/*"]
 		}
 	},
-	"extends": "@des-front/tsconfig/tsconfig.base.json",
-	"exclude": ["node_modules"]
+	"extends": "@des-front/tsconfig/tsconfig.base.json"
 }

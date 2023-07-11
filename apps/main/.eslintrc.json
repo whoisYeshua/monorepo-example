@@ -1,4 +1,12 @@
 {
 	"root": true,
-	"extends": ["@des-front"]
+	"extends": ["@des-front"],
+	"settings": {
+		"import/resolver": {
+			"node": true,
+			"typescript": {
+				"project": "apps/main/tsconfig.json"
+			}
+		}
+	}
 }

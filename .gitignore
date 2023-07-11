@@ -11,4 +11,4 @@ dist
 # misc
 .DS_Store
 .turbo
-eslint-output-config.json
+eslint-output-config*.json

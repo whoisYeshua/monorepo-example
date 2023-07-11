@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export interface NumberInputProps {
+interface NumberInputProps {
 	value?: number
 	onChange?: (value: number) => void
 }
