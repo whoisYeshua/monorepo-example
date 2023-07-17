@@ -30,6 +30,7 @@
 		"prepare": "husky install"
 	},
 	"devDependencies": {
+		"@turbo/gen": "1.10.7",
 		"@types/node": "16.18.38",
 		"husky": "8.0.3",
 		"lint-staged": "13.2.3",
