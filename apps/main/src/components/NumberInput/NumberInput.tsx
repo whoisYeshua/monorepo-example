@@ -5,14 +5,14 @@ export interface NumberInputProps {
 	onChange?: (value: number) => void
 }
 
-export const NumberInput = (props: NumberInputProps) => {
-	const [value, setValue] = useState(props.value ?? 0)
+export const NumberInput = ({ value, onChange }: NumberInputProps) => {
+	const [inputValue, setInputValue] = useState(value ?? 0)
 
 	const handleChange: React.ChangeEventHandler<HTMLInputElement> = e => {
 		const parsedValue = Number(e.target.value)
-		setValue(parsedValue)
-		props.onChange?.(parsedValue)
+		setInputValue(parsedValue)
+		onChange?.(parsedValue)
 	}
 
-	return <input type="number" value={value} onChange={handleChange} />
+	return <input type="number" value={inputValue} onChange={handleChange} />
 }

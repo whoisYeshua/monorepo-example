@@ -13,7 +13,7 @@
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
 		"lint:ts": "tsc --noEmit",
 		"clean": "rimraf .turbo dist node_modules",
-		"debug:eslint": "eslint --print-config \"./src/index.tsx\" > eslint-output-config.json",
+		"debug:eslint": "eslint --print-config \"./src/index.tsx\" > eslint-output-config-check-air.json",
 		"debug:prettier": "prettier \"./src/index.tsx\" --loglevel debug",
 		"debug:ts": "tsc --showConfig"
 	},

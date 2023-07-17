@@ -13,7 +13,7 @@ const App = () => {
 
 	return (
 		<Center inline={false}>
-			<Flex gap="md" justify="center" align="center" direction="column">
+			<Flex align="center" direction="column" gap="md" justify="center">
 				<Title order={1}>Widget app</Title>
 				<Button onClick={handleClick}>Count: {count}</Button>
 				<div>

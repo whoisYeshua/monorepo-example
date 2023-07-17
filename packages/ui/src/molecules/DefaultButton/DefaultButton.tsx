@@ -1,9 +1,9 @@
 import { Button } from '$atoms'
 
-export const SuperButton = () => (
+export const DefaultButton = () => (
 	<div>
 		<Button />
 		<br />
-		<span>SuperButton</span>
+		<span>DefaultButton</span>
 	</div>
 )

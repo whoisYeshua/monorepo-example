@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { List } from '@mantine/core'
 import { groupList } from '@des-front/helpers'
 
@@ -5,8 +6,8 @@ interface BulletListProps {
 	list: string[]
 }
 
-export const BulletList = (props: BulletListProps) => {
-	const groupedList = groupList(props.list)
+export const BulletList = memo(({ list }: BulletListProps) => {
+	const groupedList = groupList(list)
 
 	if (groupList.length === 0) return 'Empty List' as any as React.ReactElement
 
@@ -17,9 +18,9 @@ export const BulletList = (props: BulletListProps) => {
 					<span>{label}</span>
 					{labeledList ? (
 						<List
-							withPadding
 							listStyleType="disc"
 							styles={{ item: { '&::marker': { content: '"+ "' } } }}
+							withPadding
 						>
 							{labeledList.map(item => (
 								<List.Item key={item}>{item}</List.Item>
@@ -32,4 +33,5 @@ export const BulletList = (props: BulletListProps) => {
 			))}
 		</List>
 	)
-}
+})
+BulletList.displayName = 'BulletList'

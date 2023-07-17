@@ -1,7 +1,0 @@
-{
-	"env": {
-		"jest": true
-	},
-	"root": true,
-	"extends": ["@des-front"]
-}

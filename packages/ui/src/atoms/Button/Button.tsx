@@ -6,17 +6,15 @@ export interface ButtonProps {
 	onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const Button = (props: ButtonProps) => {
-	return (
-		<MButton
-			variant="outline"
-			color="indigo"
-			radius="md"
-			size="md"
-			disabled={props.disabled}
-			onClick={props.onClick}
-		>
-			{props.children}
-		</MButton>
-	)
-}
+export const Button = ({ disabled, onClick: handleClick, children }: ButtonProps) => (
+	<MButton
+		color="indigo"
+		disabled={disabled}
+		radius="md"
+		size="md"
+		variant="outline"
+		onClick={handleClick}
+	>
+		{children}
+	</MButton>
+)
