@@ -15,6 +15,7 @@
 		"dev": "turbo run dev",
 		"dev:main": "turbo run dev --filter ./apps/main",
 		"dev:widget": "turbo run dev --filter ./apps/widget",
+		"test": "turbo run test",
 		"format": "turbo run format",
 		"format:eslint": "turbo run format:eslint",
 		"format:prettier": "turbo run format:prettier",

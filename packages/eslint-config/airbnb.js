@@ -33,4 +33,12 @@ module.exports = {
 		// https://eslint.org/docs/rules/no-restricted-syntax
 		'no-restricted-syntax': 'off',
 	},
+	overrides: [
+		{
+			files: ['**/*.test.{ts,tsx}'],
+			rules: {
+				'import/no-extraneous-dependencies': 'off',
+			},
+		},
+	],
 }

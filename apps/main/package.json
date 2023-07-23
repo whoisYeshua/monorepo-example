@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
+		"test": "jest",
 		"format": "npm run format:eslint && npm run format:prettier",
 		"format:eslint": "npm run lint:eslint -- --fix",
 		"format:prettier": "npm run lint:prettier -- --write",
@@ -13,6 +14,7 @@
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
 		"lint:ts": "tsc --noEmit",
 		"clean": "rimraf .turbo dist node_modules",
+		"debug:jest": "jest --showConfig",
 		"debug:eslint": "eslint --print-config \"./src/index.tsx\" > eslint-output-config-check-air.json",
 		"debug:prettier": "prettier \"./src/index.tsx\" --loglevel debug",
 		"debug:ts": "tsc --showConfig"
@@ -25,9 +27,11 @@
 		"react-dom": "17.0.2"
 	},
 	"devDependencies": {
+		"@des-front/jest-config": "*",
 		"@des-front/eslint-config": "*",
 		"@des-front/tsconfig": "*",
 		"@des-front/ui": "*",
+		"@testing-library/react": "12.1.5",
 		"@types/react": "17.0.62",
 		"@types/react-dom": "17.0.20",
 		"@vitejs/plugin-react": "4.0.1",
