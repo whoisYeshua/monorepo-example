@@ -23,6 +23,7 @@
 		"lint:eslint": "turbo run lint:eslint",
 		"lint:prettier": "turbo run lint:prettier",
 		"lint:ts": "turbo run lint:ts --parallel",
+		"generate": "turbo gen",
 		"clean": "turbo run clean && rimraf node_modules",
 		"graph:build": "turbo run build --graph=build.graph.png",
 		"graph:dev": "turbo run dev --graph=dev.graph.png",
