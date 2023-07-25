@@ -1,5 +1,5 @@
 {
-	"name": "@des-front/tsconfig",
+	"name": "@monorepo-example/tsconfig",
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {

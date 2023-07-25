@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Center, Flex, Title } from '@mantine/core'
-import { Button, BulletList } from '@des-front/ui'
+import { Button, BulletList } from '@monorepo-example/ui'
 
 import { NumberInput } from '$components'
 

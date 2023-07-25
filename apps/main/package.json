@@ -1,5 +1,5 @@
 {
-	"name": "@des-front/main",
+	"name": "@monorepo-example/main",
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
@@ -27,10 +27,10 @@
 		"react-dom": "17.0.2"
 	},
 	"devDependencies": {
-		"@des-front/jest-config": "*",
-		"@des-front/eslint-config": "*",
-		"@des-front/tsconfig": "*",
-		"@des-front/ui": "*",
+		"@monorepo-example/jest-config": "*",
+		"@monorepo-example/eslint-config": "*",
+		"@monorepo-example/tsconfig": "*",
+		"@monorepo-example/ui": "*",
 		"@testing-library/react": "12.1.5",
 		"@types/react": "17.0.62",
 		"@types/react-dom": "17.0.20",

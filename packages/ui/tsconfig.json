@@ -5,6 +5,6 @@
 			"$*": ["*"]
 		}
 	},
-	"extends": "@des-front/tsconfig/tsconfig.base.json",
+	"extends": "@monorepo-example/tsconfig/tsconfig.base.json",
 	"exclude": ["node_modules"]
 }

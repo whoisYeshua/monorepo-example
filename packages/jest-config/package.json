@@ -1,5 +1,5 @@
 {
-	"name": "@des-front/jest-config",
+	"name": "@monorepo-example/jest-config",
 	"version": "1.0.0",
 	"description": "",
 	"main": "base.js",

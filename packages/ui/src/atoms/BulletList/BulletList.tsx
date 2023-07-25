@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { List } from '@mantine/core'
-import { groupList } from '@des-front/helpers'
+import { groupList } from '@monorepo-example/helpers'
 
 interface BulletListProps {
 	list: string[]

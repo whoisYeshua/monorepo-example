@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Center, Flex, Title } from '@mantine/core'
-import { BulletList, Button } from '@des-front/ui'
+import { BulletList, Button } from '@monorepo-example/ui'
 
 const App = () => {
 	const [count, setCount] = useState(0)

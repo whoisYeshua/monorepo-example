@@ -1,5 +1,5 @@
 {
-	"name": "@des-front/ui",
+	"name": "@monorepo-example/ui",
 	"version": "1.0.0",
 	"description": "",
 	"main": "src/index.ts",
@@ -24,9 +24,9 @@
 		"react-dom": "17.0.2"
 	},
 	"devDependencies": {
-		"@des-front/eslint-config": "*",
-		"@des-front/helpers": "*",
-		"@des-front/tsconfig": "*",
+		"@monorepo-example/eslint-config": "*",
+		"@monorepo-example/helpers": "*",
+		"@monorepo-example/tsconfig": "*",
 		"@types/react": "17.0.62",
 		"@types/react-dom": "17.0.20"
 	}

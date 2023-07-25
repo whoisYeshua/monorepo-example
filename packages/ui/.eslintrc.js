@@ -8,7 +8,7 @@ module.exports = {
 		tsconfigRootDir: __dirname,
 		project: './tsconfig.json',
 	},
-	extends: ['@des-front'],
+	extends: ['@monorepo-example'],
 	settings: {
 		'import/resolver': {
 			node: true,

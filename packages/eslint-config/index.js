@@ -55,7 +55,7 @@ module.exports = {
 				groups: [['builtin', 'external'], ['internal', 'parent'], ['sibling', 'index'], 'type'],
 				pathGroups: [
 					{ pattern: 'react*', group: 'external', position: 'before' },
-					{ pattern: '@des-front/*', group: 'external', position: 'after' },
+					{ pattern: '@monorepo-example/*', group: 'external', position: 'after' },
 				],
 				pathGroupsExcludedImportTypes: ['type'],
 				distinctGroup: false,

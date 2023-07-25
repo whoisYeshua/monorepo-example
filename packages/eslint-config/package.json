@@ -1,5 +1,5 @@
 {
-	"name": "@des-front/eslint-config",
+	"name": "@monorepo-example/eslint-config",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
