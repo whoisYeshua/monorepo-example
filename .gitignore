@@ -12,3 +12,4 @@ dist
 .DS_Store
 .turbo
 eslint-output-config*.json
+npm-debug.log
