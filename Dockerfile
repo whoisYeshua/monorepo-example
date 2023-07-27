@@ -3,6 +3,8 @@
 # The as build-deps part allows us to name this part of the build process. That name can then be referred to when configuring the production environment later.
 FROM node:16.17-alpine as build
 
+ARG MODULE=main
+
 # Create app directory
 WORKDIR /app
 
@@ -23,15 +25,15 @@ RUN npm ci
 COPY . .
 
 # Build app
-RUN npm run build:main
-RUN npm run build:widget
+RUN npm run build:${MODULE}
 
 # Bundle static assets with nginx stage
 FROM nginx:1.22-alpine AS static
 
+ARG MODULE=main
+
 # Copy built assets from builder
-COPY --from=build /app/apps/main/dist /usr/share/nginx/html/main
-COPY --from=build /app/apps/widget/dist /usr/share/nginx/html/widget
+COPY --from=build /app/apps/${MODULE}/dist /usr/share/nginx/html
 
 # Add our nginx.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf

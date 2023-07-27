@@ -14,7 +14,7 @@ const App = () => {
 	return (
 		<Center inline={false}>
 			<Flex align="center" direction="column" gap="md" justify="center">
-				<Title order={1}>Widget app</Title>
+				<Title order={1}>Widget app2</Title>
 				<Button onClick={handleClick}>Count: {count}</Button>
 				<div>
 					<BulletList list={list} />
