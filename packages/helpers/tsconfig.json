@@ -1,9 +1,3 @@
 {
-	"compilerOptions": {
-		"baseUrl": "./",
-		"paths": {
-			"@*": ["./src/*"]
-		}
-	},
 	"extends": "@monorepo-example/tsconfig/tsconfig.base.json"
 }

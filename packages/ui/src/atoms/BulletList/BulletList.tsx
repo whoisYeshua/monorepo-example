@@ -2,14 +2,14 @@ import { memo } from 'react'
 import { List } from '@mantine/core'
 import { groupList } from '@monorepo-example/helpers'
 
-interface BulletListProps {
+export interface BulletListProps {
 	list: string[]
 }
 
 export const BulletList = memo(({ list }: BulletListProps) => {
 	const groupedList = groupList(list)
 
-	if (groupList.length === 0) return 'Empty List' as any as React.ReactElement
+	if (groupList.length === 0) return 'Empty List' as unknown as React.ReactElement
 
 	return (
 		<List listStyleType="disc">
@@ -22,7 +22,7 @@ export const BulletList = memo(({ list }: BulletListProps) => {
 							styles={{ item: { '&::marker': { content: '"+ "' } } }}
 							withPadding
 						>
-							{labeledList.map(item => (
+							{labeledList.map((item) => (
 								<List.Item key={item}>{item}</List.Item>
 							))}
 						</List>

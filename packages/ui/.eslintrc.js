@@ -1,7 +1,3 @@
-const atomsPath = '**/src/atoms/**/*'
-const moleculesPath = ''
-const organismsPath = ''
-
 module.exports = {
 	root: true,
 	parserOptions: {
@@ -25,11 +21,11 @@ module.exports = {
 			{
 				zones: [
 					{
-						target: '**/src/atoms/**/*.tsx',
+						target: '**/src/atoms/**/!(*.stories|*.test).tsx',
 						from: ['**/src/molecules/**/*', '**/src/organisms/**/*', '**/src/atoms/**/*'],
 					},
 					{
-						target: '**/src/molecules/**/*.tsx',
+						target: '**/src/molecules/**/!(*.stories|*.test).tsx',
 						from: ['**/src/molecules/**/*', '**/src/organisms/**/*'],
 					},
 				],

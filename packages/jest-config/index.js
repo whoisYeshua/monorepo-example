@@ -1,1 +1,4 @@
-module.exports = require('./base')
+const base = require('./base')
+const pathsToModuleNameMapper = require('./pathsToModuleNameMapper')
+
+module.exports = { ...base, pathsToModuleNameMapper }

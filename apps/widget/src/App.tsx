@@ -6,7 +6,7 @@ const App = () => {
 	const [count, setCount] = useState(0)
 
 	const handleClick = () => {
-		setCount(prev => ++prev)
+		setCount((prev) => ++prev)
 	}
 
 	const list = ['Red', 'Orange', 'Green', 'Blue', 'Black', 'Yellow']

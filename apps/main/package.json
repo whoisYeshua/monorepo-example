@@ -1,9 +1,11 @@
 {
 	"name": "@monorepo-example/main",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Main microfrontend monorepo example",
 	"scripts": {
 		"dev": "vite",
+		"dev:mock": "cross-env VITE_API=mock vite",
+		"dev:local": "cross-env VITE_API=local vite",
 		"build": "vite build",
 		"test": "jest",
 		"format": "npm run format:eslint && npm run format:prettier",
@@ -11,31 +13,39 @@
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts",
 		"lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
-		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:jest": "jest --showConfig",
-		"debug:eslint": "eslint --print-config \"./src/index.tsx\" > eslint-output-config-check-air.json",
-		"debug:prettier": "prettier \"./src/index.tsx\" --loglevel debug",
+		"debug:eslint": "eslint --print-config \"./src/index.tsx\" > eslint-output-config.json",
+		"debug:prettier": "prettier \"./src/index.tsx\" --loglevel debug --ignore-path ../../.prettierignore",
 		"debug:ts": "tsc --showConfig"
 	},
 	"dependencies": {
 		"@emotion/react": "11.11.1",
 		"@mantine/core": "6.0.15",
 		"@mantine/hooks": "6.0.15",
+		"@monorepo-example/helpers": "*",
+		"@monorepo-example/ui": "*",
+		"ramda": "0.29.0",
 		"react": "17.0.2",
-		"react-dom": "17.0.2"
+		"react-dom": "17.0.2",
+		"uuid": "9.0.0"
 	},
 	"devDependencies": {
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@monorepo-example/ui": "*",
-		"@testing-library/react": "12.1.5",
+		"@types/ramda": "0.29.3",
 		"@types/react": "17.0.62",
 		"@types/react-dom": "17.0.20",
+		"@types/uuid": "8.3.4",
+		"msw": "1.2.3",
 		"@vitejs/plugin-react": "4.0.1",
 		"vite": "4.3.9",
 		"vite-tsconfig-paths": "4.2.0"
+	},
+	"msw": {
+		"workerDirectory": "public"
 	}
 }

@@ -1,15 +1,15 @@
 {
 	"name": "@monorepo-example/eslint-config",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Common ESLint config for monorepo example",
 	"main": "index.js",
 	"scripts": {
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier",
-		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"clean": "rimraf .turbo dist node_modules",
-		"debug:prettier": "prettier \"./index.js\" --loglevel debug"
+		"debug:prettier": "prettier \"./index.js\" --loglevel debug --ignore-path ../../.prettierignore"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "5.60.1",

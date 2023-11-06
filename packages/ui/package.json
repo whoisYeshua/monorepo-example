@@ -1,31 +1,33 @@
 {
 	"name": "@monorepo-example/ui",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Common UI components for microfrontends",
 	"main": "src/index.ts",
 	"scripts": {
+		"dev": "ladle serve --port 4123",
 		"format": "npm run format:eslint && npm run format:prettier",
 		"format:eslint": "npm run lint:eslint -- --fix",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts",
 		"lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
-		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
-		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug",
+		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug --ignore-path ../../.prettierignore",
 		"debug:ts": "tsc --showConfig"
 	},
 	"dependencies": {
 		"@emotion/react": "11.11.1",
 		"@mantine/core": "6.0.15",
 		"@mantine/hooks": "6.0.15",
+		"@monorepo-example/helpers": "*",
+		"@ladle/react": "2.16.0",
 		"react": "17.0.2",
 		"react-dom": "17.0.2"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
-		"@monorepo-example/helpers": "*",
 		"@monorepo-example/tsconfig": "*",
 		"@types/react": "17.0.62",
 		"@types/react-dom": "17.0.20"

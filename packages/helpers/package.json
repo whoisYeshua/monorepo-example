@@ -1,7 +1,7 @@
 {
 	"name": "@monorepo-example/helpers",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Helper utility functions for monorepo example",
 	"main": "./src/index.ts",
 	"scripts": {
 		"test": "jest",
@@ -10,12 +10,12 @@
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts",
 		"lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
-		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:jest": "jest --showConfig",
 		"debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
-		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug",
+		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug --ignore-path ../../.prettierignore",
 		"debug:ts": "tsc --showConfig"
 	},
 	"dependencies": {

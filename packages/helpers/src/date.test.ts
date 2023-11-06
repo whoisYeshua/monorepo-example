@@ -16,7 +16,7 @@ describe('formateDate', () => {
 	it('should format a date using the dateTime format', () => {
 		const dateValue = '2023-07-22T12:34:56.789Z'
 		const formattedDate = formateDate(dateValue, 'dateTime')
-		expect(formattedDate).toBe('22 июля 2023 г., 15:34')
+		expect(formattedDate).toBe('22 июля 2023 г. в 15:34')
 	})
 
 	it('should handle null and return an empty string', () => {

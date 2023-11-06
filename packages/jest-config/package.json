@@ -1,8 +1,8 @@
 {
 	"name": "@monorepo-example/jest-config",
 	"version": "1.0.0",
-	"description": "",
-	"main": "base.js",
+	"description": "Jest config and setup for monorepo example",
+	"main": "index.js",
 	"files": [
 		"setupTests.ts"
 	],
@@ -10,14 +10,14 @@
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier",
-		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"clean": "rimraf .turbo dist node_modules",
-		"debug:prettier": "prettier \"./tsconfig.base.json\" --loglevel debug"
+		"debug:prettier": "prettier \"./tsconfig.base.json\" --loglevel debug --ignore-path ../../.prettierignore"
 	},
 	"devDependencies": {
 		"@swc/core": "1.3.70",
 		"@swc/jest": "0.2.27",
-		"@testing-library/jest-dom": "5.17.0",
+		"@testing-library/react": "12.1.5",
 		"@testing-library/user-event": "14.4.3",
 		"@types/jest": "29.5.3",
 		"@types/ramda": "0.29.3",

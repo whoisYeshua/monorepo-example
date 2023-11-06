@@ -3,11 +3,11 @@ const path = require('node:path')
 const { mergeDeepLeft } = require('ramda')
 
 /**
- * Возвращает абсолютный путь до файла относительно запрашивающей директории
- * @param {string} filePath Относительный путь к файлу от запрашивающей директории
+ * Возвращает абсолютный путь до файла относительно папки пакета `jest-config`
+ * @param {string} filePath Относительный путь к файлу от папки пакета `jest-config`
  * @returns {string}
  */
-const fromRoot = filePath => path.join(__dirname, filePath)
+const fromJestConfigPackageRoot = (filePath) => path.join(__dirname, filePath)
 
 /** @type {import('jest').Config} */
 const sharedConfig = {
@@ -19,8 +19,9 @@ const sharedConfig = {
 				jsc: {
 					parser: {
 						syntax: 'typescript',
-						jsx: true,
+						tsx: true,
 					},
+					target: 'es2022',
 					transform: {
 						react: {
 							runtime: 'automatic',
@@ -30,11 +31,7 @@ const sharedConfig = {
 			},
 		],
 	},
-	moduleNameMapper: {
-		'^\\$atoms/(.*)$': fromRoot('/../../packages/ui/src/atoms/$1'),
-		'^\\$atoms$': fromRoot('/../../packages/ui/src/atoms'),
-	},
-	setupFilesAfterEnv: [fromRoot('setupTests.ts')],
+	setupFilesAfterEnv: [fromJestConfigPackageRoot('./setupTests.ts')],
 	resetMocks: true,
 }
 
@@ -42,6 +39,6 @@ const sharedConfig = {
  * Мерж пакетного Jest-конфига с базовым (в Jest нет встроенного механизма наследования конфигов)
  * @param {import('jest').Config} packageConfig Jest-конфиг пакета
  */
-const mergeWithBase = packageConfig => mergeDeepLeft(packageConfig, sharedConfig)
+const mergeWithBase = (packageConfig) => mergeDeepLeft(packageConfig, sharedConfig)
 
-module.exports = { sharedConfig, fromRoot, mergeWithBase }
+module.exports = { sharedConfig, mergeWithBase }

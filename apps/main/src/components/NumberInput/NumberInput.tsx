@@ -8,7 +8,7 @@ export interface NumberInputProps {
 export const NumberInput = ({ value, onChange }: NumberInputProps) => {
 	const [inputValue, setInputValue] = useState(value ?? 0)
 
-	const handleChange: React.ChangeEventHandler<HTMLInputElement> = e => {
+	const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
 		const parsedValue = Number(e.target.value)
 		setInputValue(parsedValue)
 		onChange?.(parsedValue)

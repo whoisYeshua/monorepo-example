@@ -12,4 +12,5 @@ dist
 # misc
 .DS_Store
 .turbo
-npm-debug.log
+eslint-output-config*.json
+*.hbs

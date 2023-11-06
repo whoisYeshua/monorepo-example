@@ -11,5 +11,6 @@ dist
 # misc
 .DS_Store
 .turbo
+coverage
+test-report.xml
 eslint-output-config*.json
-npm-debug.log

@@ -1,0 +1,10 @@
+import { ApiUrl } from './config'
+
+import type { {{pascalCase name}} } from '$models'
+
+export const {{lowerCase httpMethod}}{{pascalCase name}} = async ({{#if queryParamName}}{{camelCase queryParamName}}: string{{/if}}) => {
+	const res = await fetch(new ApiUrl('/post'{{#if queryParamName}}, { params: { {{camelCase queryParamName}} } }){{/if}}.href, {
+		method: '{{upperCase httpMethod}}',
+	})
+	return res.json() as Promise<{{pascalCase name}}>
+}

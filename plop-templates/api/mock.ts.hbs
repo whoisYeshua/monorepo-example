@@ -1,0 +1,20 @@
+import { rest } from 'msw'
+
+import { BACKEND_PATH } from '$constants'
+
+import { mock{{pascalCase httpMethod}}{{pascalCase name}}Data } from './mock{{pascalCase name}}Data'
+
+const mock{{pascalCase httpMethod}}{{pascalCase name}} = rest.{{lowerCase httpMethod}}(
+  `${BACKEND_PATH}/v1/{{kebabCase urlPath}}`,
+  async (_req, res, ctx) => {
+    const body = mock{{pascalCase httpMethod}}{{pascalCase name}}Data
+
+    return res(
+      ctx.status(200),
+      ctx.delay(600),
+      ctx.json({ sucess: true, body })
+    )
+  }
+)
+
+export const mock{{pascalCase name}} = [mock{{pascalCase httpMethod}}{{pascalCase name}}]

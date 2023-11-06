@@ -1,3 +1,4 @@
+// Depreceted file, should be deleted in future
 // // @ts-check
 // const { mergeDeepLeft } = require('ramda')
 

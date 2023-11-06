@@ -1,12 +1,4 @@
 module.exports = {
-	// Override airbnb-base parserOptions for modern features support
-	// https://github.com/airbnb/javascript/blob/fd77bbebb77362ddecfef7aba3bf6abf7bdd81f2/packages/eslint-config-airbnb-base/rules/es6.js
-	parserOptions: {
-		ecmaFeatures: {
-			generators: true,
-			objectLiteralDuplicateProperties: true,
-		},
-	},
 	extends: ['airbnb-base', 'airbnb-typescript/base'],
 	rules: {
 		// Disallow use of variables before they are defined (eslint built-in rule уже отключено в airbnb-typescript/base. Зачастую будет мешать (например, при styled) в контексе react приложения, где все подобные переменные, функции уже проинициализированы при старте приложения)
