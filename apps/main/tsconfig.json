@@ -3,7 +3,8 @@
 		"baseUrl": "src",
 		"paths": {
 			"$*": ["*", "../../../packages/ui/src/*"]
-		}
+		},
+		"types": ["@testing-library/jest-dom"]
 	},
 	"extends": "@monorepo-example/tsconfig/tsconfig.base.json"
 }
