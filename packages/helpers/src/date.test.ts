@@ -1,4 +1,4 @@
-import { formateDate } from './date' // Update the import path accordingly
+import { formateDate } from './date'
 
 describe('formateDate', () => {
 	it('should format a date using the dateLong format', () => {
