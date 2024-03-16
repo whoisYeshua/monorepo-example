@@ -35,6 +35,18 @@ module.exports = {
 		// https://typescript-eslint.io/rules/consistent-type-imports
 		'@typescript-eslint/consistent-type-imports': 'warn',
 
+		// Disallow the declaration of empty interfaces
+		// https://typescript-eslint.io/rules/no-empty-interface
+		'@typescript-eslint/no-empty-interface': 'error',
+
+		// Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean
+		// https://typescript-eslint.io/rules/no-inferrable-types
+		'@typescript-eslint/no-inferrable-types': 'error',
+
+		// Disallow non-null assertions using the ! postfix operator
+		// https://typescript-eslint.io/rules/no-non-null-assertion
+		'@typescript-eslint/no-non-null-assertion': 'warn',
+
 		// Disallow non-import statements appearing before import statements
 		// https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/first.md
 		'import/first': 'warn',
@@ -97,5 +109,13 @@ module.exports = {
 		// Prevent abbreviations (создает лишний шум, а написать непонятную переменную можно и с этим правилом. Будем отлавливать на уровне PR, поэтому вырубаем)
 		// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
 		'unicorn/prevent-abbreviations': 'off',
+
+		// Enforce the use of built-in methods instead of unnecessary polyfills (не используем полифилы на проекте, лишняя проверка)
+		// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unnecessary-polyfills.md
+		'unicorn/no-unnecessary-polyfills': 'off',
+
+		// Use destructured variables over properties (было включено на проекте с самого старта, но потом авторы unicorn его убрали из recomended, выглядит вроде логично, так что оставляем)
+		// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-destructuring.md
+		'unicorn/consistent-destructuring': 'error',
 	},
 }
