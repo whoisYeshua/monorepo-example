@@ -31,6 +31,7 @@ const sharedConfig = {
 			},
 		],
 	},
+	moduleFileExtensions: ['js', 'ts', 'tsx'],
 	setupFilesAfterEnv: [fromJestConfigPackageRoot('./setupTests.ts')],
 	resetMocks: true,
 }

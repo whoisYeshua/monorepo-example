@@ -19,7 +19,7 @@
 		"debug:ts": "tsc --showConfig"
 	},
 	"dependencies": {
-		"ramda": "0.29.0"
+		"ramda": "0.29.1"
 	},
 	"devDependencies": {
 		"@monorepo-example/jest-config": "*",

@@ -1,8 +1,8 @@
-import * as R from 'ramda'
+import { uniq, groupBy } from 'ramda'
 
 export const groupList = (names: string[]) => {
-	const uniqValues = R.uniq(names)
-	const byName = R.groupBy((name: string) => name.trimStart()[0])
+	const uniqValues = uniq(names)
+	const byName = groupBy((name: string) => name.trimStart()[0])
 	return byName(uniqValues)
 }
 
