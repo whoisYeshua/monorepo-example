@@ -38,9 +38,12 @@
 		"@types/react": "17.0.62",
 		"@types/react-dom": "17.0.20",
 		"@types/uuid": "9.0.8",
-		"msw": "2.2.4",
+		"msw": "2.3.1",
 		"@vitejs/plugin-react": "4.2.1",
 		"vite": "4.5.0",
 		"vite-tsconfig-paths": "4.3.2"
+	},
+	"msw": {
+		"workerDirectory": "public"
 	}
 }

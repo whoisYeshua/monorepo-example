@@ -1,6 +1,7 @@
 {
 	"$schema": "https://turborepo.org/schema.json",
-	"pipeline": {
+	"ui": "stream",
+	"tasks": {
 		"dev": {
 			"cache": false,
 			"persistent": true
@@ -18,30 +19,21 @@
 		},
 		"test": {},
 		"format": {
-			"dependsOn": ["^format"],
-			"outputs": []
+			"dependsOn": ["^format"]
 		},
-		"format:prettier": {
-			"outputs": []
-		},
+		"format:prettier": {},
 		"format:eslint": {
-			"dependsOn": ["^format:eslint"],
-			"outputs": []
+			"dependsOn": ["^format:eslint"]
 		},
 		"lint": {
-			"dependsOn": ["^lint"],
-			"outputs": []
+			"dependsOn": ["^lint"]
 		},
-		"lint:prettier": {
-			"outputs": []
-		},
+		"lint:prettier": {},
 		"lint:eslint": {
-			"dependsOn": ["^lint:eslint"],
-			"outputs": []
+			"dependsOn": ["^lint:eslint"]
 		},
 		"lint:ts": {
-			"dependsOn": ["^lint:ts"],
-			"outputs": []
+			"dependsOn": ["^lint:ts"]
 		},
 		"clean": {}
 	}
