@@ -8,6 +8,8 @@ module.exports = {
 	parserOptions: {
 		// Override @typescript-eslint 2018 default  https://typescript-eslint.io/packages/parser/#ecmaversion
 		ecmaVersion: 2023,
+		tsconfigRootDir: process.cwd(),
+		project: true, // find the tsconfig.json nearest to each source file
 	},
 	extends: [
 		require.resolve('./airbnb'),
