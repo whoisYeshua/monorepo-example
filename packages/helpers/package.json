@@ -19,12 +19,12 @@
 		"debug:ts": "tsc --showConfig"
 	},
 	"dependencies": {
-		"ramda": "0.29.1"
+		"ramda": "0.30.1"
 	},
 	"devDependencies": {
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@types/ramda": "0.29.3"
+		"@types/ramda": "0.30.2"
 	}
 }

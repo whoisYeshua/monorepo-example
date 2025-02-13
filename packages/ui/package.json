@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Common UI components for microfrontends",
 	"main": "src/index.ts",
+	"sideEffects": false,
 	"scripts": {
 		"dev": "ladle serve --port 4123",
 		"format": "npm run format:eslint && npm run format:prettier",
@@ -18,18 +19,18 @@
 		"debug:ts": "tsc --showConfig"
 	},
 	"dependencies": {
-		"@emotion/react": "11.11.4",
+		"@emotion/react": "11.14.0",
 		"@mantine/core": "6.0.15",
 		"@mantine/hooks": "6.0.15",
 		"@monorepo-example/helpers": "*",
-		"@ladle/react": "2.16.0",
-		"react": "17.0.2",
-		"react-dom": "17.0.2"
+		"@ladle/react": "4.1.0",
+		"react": "18.3.1",
+		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@types/react": "17.0.62",
-		"@types/react-dom": "17.0.20"
+		"@types/react": "18.3.3",
+		"@types/react-dom": "18.3.0"
 	}
 }
