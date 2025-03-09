@@ -14,3 +14,4 @@ dist
 .turbo
 eslint-output-config*.json
 *.hbs
+coverage

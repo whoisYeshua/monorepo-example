@@ -1,4 +1,4 @@
-import { Button as MButton } from '@mantine/core'
+import { Button as ChakraButton } from '@chakra-ui/react'
 
 export interface ButtonProps {
 	children?: React.ReactNode
@@ -7,14 +7,13 @@ export interface ButtonProps {
 }
 
 export const Button = ({ disabled, onClick: handleClick, children }: ButtonProps) => (
-	<MButton
-		color="indigo"
+	<ChakraButton
+		colorPalette="green"
 		disabled={disabled}
-		radius="md"
 		size="md"
-		variant="outline"
+		variant="subtle"
 		onClick={handleClick}
 	>
 		{children}
-	</MButton>
+	</ChakraButton>
 )

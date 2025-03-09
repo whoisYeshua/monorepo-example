@@ -1,8 +1,8 @@
 import { memo } from 'react'
-import { List } from '@mantine/core'
+import { List } from '@chakra-ui/react'
 import { groupList } from '@monorepo-example/helpers'
 
-export interface BulletListProps {
+interface BulletListProps {
 	list: string[]
 }
 
@@ -12,26 +12,24 @@ export const BulletList = memo(({ list }: BulletListProps) => {
 	if (groupList.length === 0) return 'Empty List' as unknown as React.ReactElement
 
 	return (
-		<List listStyleType="disc">
+		<List.Root listStyleType="disc">
 			{Object.entries(groupedList).map(([label, labeledList]) => (
 				<List.Item key={label}>
 					<span>{label}</span>
 					{labeledList ? (
-						<List
-							listStyleType="disc"
-							styles={{ item: { '&::marker': { content: '"+ "' } } }}
-							withPadding
-						>
+						<List.Root listStyleType="disc" pl="1.5rem">
 							{labeledList.map((item) => (
-								<List.Item key={item}>{item}</List.Item>
+								<List.Item key={item} css={{ '&::marker': { content: '"+ "' } }}>
+									{item}
+								</List.Item>
 							))}
-						</List>
+						</List.Root>
 					) : (
 						'No items'
 					)}
 				</List.Item>
 			))}
-		</List>
+		</List.Root>
 	)
 })
 BulletList.displayName = 'BulletList'

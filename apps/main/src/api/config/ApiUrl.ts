@@ -7,7 +7,7 @@ interface Options {
 }
 
 export class ApiUrl {
-	#baseUrl = new URL(`/${BACKEND_PATH}/`, window.location.origin)
+	#baseUrl = new URL(`/${BACKEND_PATH}/`, globalThis.location.origin)
 
 	href: string
 

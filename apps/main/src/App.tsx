@@ -1,13 +1,13 @@
-import { MantineProvider } from '@mantine/core'
+import { UiProvider } from '@monorepo-example/ui'
 
 import { Topbar } from '$components'
 import { First } from '$pages'
 
 const App = () => (
-	<MantineProvider withGlobalStyles withNormalizeCSS>
+	<UiProvider>
 		<Topbar />
 		<First />
-	</MantineProvider>
+	</UiProvider>
 )
 
 export default App

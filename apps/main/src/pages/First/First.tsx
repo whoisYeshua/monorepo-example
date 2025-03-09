@@ -1,6 +1,5 @@
 import { useState, memo } from 'react'
-import { Center, Flex, Title } from '@mantine/core'
-import { Button, BulletList } from '@monorepo-example/ui'
+import { Button, BulletList, Center, Flex, Heading } from '@monorepo-example/ui'
 
 import { NumberInput } from '$components'
 
@@ -26,9 +25,9 @@ export const First = memo(() => {
 	]
 
 	return (
-		<Center inline={false}>
-			<Flex align="center" direction="column" gap="md" justify="center">
-				<Title order={1}>Main app</Title>
+		<Center as="main" py="16px">
+			<Flex align="center" direction="column" gap="16px" justify="center">
+				<Heading>Main app</Heading>
 				<Button onClick={handleClick}>Count: {count}</Button>
 				<NumberInput />
 				<div>

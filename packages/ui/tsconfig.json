@@ -1,9 +1,6 @@
 {
 	"compilerOptions": {
-		"baseUrl": "src",
-		"paths": {
-			"$*": ["*"]
-		}
+		"types": ["@testing-library/jest-dom"]
 	},
 	"extends": "@monorepo-example/tsconfig/tsconfig.base.json",
 	"exclude": ["node_modules"]

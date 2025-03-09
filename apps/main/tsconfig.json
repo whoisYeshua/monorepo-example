@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
-		"baseUrl": "src",
+		"types": ["@testing-library/jest-dom"],
+		"baseUrl": ".",
 		"paths": {
-			"$*": ["*", "../../../packages/ui/src/*"]
-		},
-		"types": ["@testing-library/jest-dom"]
+			"$*": ["src/*"]
+		}
 	},
 	"extends": "@monorepo-example/tsconfig/tsconfig.base.json"
 }

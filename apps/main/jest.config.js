@@ -1,13 +1,14 @@
-/* eslint-disable @typescript-eslint/no-var-requires -- CJS файл */
+/* eslint-disable @typescript-eslint/no-require-imports -- CJS file */
 // @ts-check
 const path = require('node:path')
 const { mergeWithBase, pathsToModuleNameMapper } = require('@monorepo-example/jest-config')
 
+const { name } = require('./package.json')
 const { compilerOptions } = require('./tsconfig.json')
 
 /** @type {import('jest').Config} */
 const packageConfig = {
-	displayName: 'main',
+	displayName: name,
 	moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
 		prefix: path.join('<rootDir>', compilerOptions.baseUrl),
 	}),

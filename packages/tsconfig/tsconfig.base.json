@@ -19,6 +19,7 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": false,
 		"forceConsistentCasingInFileNames": true,
+		"verbatimModuleSyntax": true,
 
 		/* Type Checking */
 		"strict": true,

@@ -1,13 +1,12 @@
 {
 	"name": "@monorepo-example/main",
 	"version": "1.0.0",
-	"description": "Main microfrontend monorepo example",
+	"description": "Main app monorepo example",
 	"scripts": {
 		"dev": "vite",
 		"dev:mock": "cross-env VITE_API=mock vite",
 		"dev:local": "cross-env VITE_API=local vite",
 		"build": "vite build",
-		"test": "jest",
 		"format": "npm run format:eslint && npm run format:prettier",
 		"format:eslint": "npm run lint:eslint -- --fix",
 		"format:prettier": "npm run lint:prettier -- --write",
@@ -15,34 +14,33 @@
 		"lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit",
+		"test": "jest",
 		"clean": "rimraf .turbo dist node_modules",
-		"debug:jest": "jest --showConfig",
 		"debug:eslint": "eslint --print-config \"./src/index.tsx\" > eslint-output-config.json",
 		"debug:prettier": "prettier \"./src/index.tsx\" --loglevel debug --ignore-path ../../.prettierignore",
-		"debug:ts": "tsc --showConfig"
+		"debug:ts": "tsc --showConfig",
+		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
 		"@emotion/react": "11.14.0",
-		"@mantine/core": "6.0.15",
-		"@mantine/hooks": "6.0.15",
 		"@monorepo-example/helpers": "*",
 		"@monorepo-example/ui": "*",
 		"ramda": "0.30.1",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
-		"uuid": "11.0.5"
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
+		"uuid": "11.1.0"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/tsconfig": "*",
 		"@types/ramda": "0.30.2",
-		"@types/react": "18.3.3",
-		"@types/react-dom": "18.3.0",
+		"@types/react": "19.0.10",
+		"@types/react-dom": "19.0.4",
 		"@types/uuid": "10.0.0",
 		"@vitejs/plugin-react": "4.3.4",
-		"msw": "2.7.0",
-		"vite": "6.1.0",
+		"msw": "2.7.3",
+		"vite": "6.2.1",
 		"vite-tsconfig-paths": "5.1.4"
 	},
 	"msw": {

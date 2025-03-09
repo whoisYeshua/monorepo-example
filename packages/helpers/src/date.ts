@@ -1,17 +1,7 @@
-const DATE_FORMATS = {
-	dateLong: {
-		dateStyle: 'long',
-	},
-	dateShort: {
-		dateStyle: 'short',
-	},
-	dateTime: {
-		dateStyle: 'long',
-		timeStyle: 'short',
-	},
-} as const
+export const getDate = (date: string | number) => new Date(date).toLocaleDateString('ru-RU')
 
-type Format = keyof typeof DATE_FORMATS
-
-export const formateDate = (value?: string | null, format: Format = 'dateLong'): string =>
-	value ? new Date(value).toLocaleString('ru', DATE_FORMATS[format]) : ''
+export const getTime = (date: string | number) =>
+	new Date(date).toLocaleTimeString('ru-RU', {
+		hour: '2-digit',
+		minute: '2-digit',
+	})

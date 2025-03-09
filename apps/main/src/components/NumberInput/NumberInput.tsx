@@ -1,18 +1,23 @@
 import { useState } from 'react'
+import { NumberInput as ChakraNumberInput } from '@monorepo-example/ui'
 
-export interface NumberInputProps {
-	value?: number
-	onChange?: (value: number) => void
+interface NumberInputProps {
+	value?: number | null
+	onChange?: (value: number | null) => void
 }
 
 export const NumberInput = ({ value, onChange }: NumberInputProps) => {
-	const [inputValue, setInputValue] = useState(value ?? 0)
+	const [inputValue, setInputValue] = useState(value ?? null)
 
-	const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-		const parsedValue = Number(e.target.value)
+	const handleChange = ({ valueAsNumber }: { value: string; valueAsNumber: number }) => {
+		const parsedValue = Number.isNaN(valueAsNumber) ? null : valueAsNumber
 		setInputValue(parsedValue)
 		onChange?.(parsedValue)
 	}
 
-	return <input type="number" value={inputValue} onChange={handleChange} />
+	return (
+		<ChakraNumberInput.Root value={inputValue} width="200px" onValueChange={handleChange}>
+			<ChakraNumberInput.Input />
+		</ChakraNumberInput.Root>
+	)
 }

@@ -77,11 +77,11 @@ module.exports = {
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
 		'react/void-dom-elements-no-children': 'error',
 
-		// Disallow curly braces of disallow unnecessary curly braces in JSX props and/or children
+		// Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
 		'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
 
-		// Disallow missing props validation in a React component definition (prop types are not used on the project)
+		// Disallow missing props validation in a React component definition (prop types не используем на проекте)
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md
 		'react/prop-types': 'off',
 	},

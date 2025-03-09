@@ -1,14 +1,23 @@
 import { BulletList as CommonBulletList } from './BulletList'
 
-import type { BulletListProps } from './BulletList'
-import type { Story } from '@ladle/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export const BulletList: Story<BulletListProps> = CommonBulletList
+type Story = StoryObj<typeof CommonBulletList>
 
-BulletList.args = {
-	list: ['first', 'second', 'third'],
+export const BulletList: Story = {
+	args: {
+		list: ['first', 'second', 'third', 'fourth'],
+	},
+}
+
+export const BulletListInContainer: Story = {
+	render: () => (
+		<div>
+			<CommonBulletList list={['first', 'last']} />
+		</div>
+	),
 }
 
 export default {
-	title: 'Atoms',
-}
+	component: CommonBulletList,
+} satisfies Meta<typeof CommonBulletList>

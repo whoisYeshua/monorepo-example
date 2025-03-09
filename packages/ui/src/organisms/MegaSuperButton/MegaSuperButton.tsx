@@ -1,6 +1,6 @@
-import { Button } from '$atoms'
-import { DefaultButton } from '$molecules'
-import { MegaDefaultButton } from '$organisms'
+import { Button } from '../../atoms'
+import { DefaultButton } from '../../molecules'
+import { MegaDefaultButton } from '../MegaDefaultButton'
 
 export const MegaSuperButton = () => (
 	<div>

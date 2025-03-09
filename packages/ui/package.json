@@ -1,11 +1,11 @@
 {
 	"name": "@monorepo-example/ui",
 	"version": "1.0.0",
-	"description": "Common UI components for microfrontends",
+	"description": "Common UI components for apps",
 	"main": "src/index.ts",
 	"sideEffects": false,
 	"scripts": {
-		"dev": "ladle serve --port 4123",
+		"dev": "storybook dev --port 4123",
 		"format": "npm run format:eslint && npm run format:prettier",
 		"format:eslint": "npm run lint:eslint -- --fix",
 		"format:prettier": "npm run lint:prettier -- --write",
@@ -13,24 +13,33 @@
 		"lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit",
+		"test": "jest",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
 		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug --ignore-path ../../.prettierignore",
-		"debug:ts": "tsc --showConfig"
+		"debug:ts": "tsc --showConfig",
+		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
+		"@chakra-ui/react": "3.11.0",
 		"@emotion/react": "11.14.0",
-		"@mantine/core": "6.0.15",
-		"@mantine/hooks": "6.0.15",
 		"@monorepo-example/helpers": "*",
-		"@ladle/react": "4.1.0",
-		"react": "18.3.1",
-		"react-dom": "18.3.1"
+		"@storybook/addon-actions": "8.6.4",
+		"@storybook/addon-essentials": "8.6.4",
+		"@storybook/blocks": "8.6.4",
+		"@storybook/react": "8.6.4",
+		"@storybook/react-vite": "8.6.4",
+		"next-themes": "0.4.4",
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
+		"react-icons": "5.5.0",
+		"storybook": "8.6.4"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
+		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@types/react": "18.3.3",
-		"@types/react-dom": "18.3.0"
+		"@types/react": "19.0.10",
+		"@types/react-dom": "19.0.4"
 	}
 }

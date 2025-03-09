@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- turbo должен быть на root уровне проекта
+// eslint-disable-next-line import/no-extraneous-dependencies -- turbo should be at the root level of the project
 import type { PlopTypes } from '@turbo/gen'
 
 const requireField = (fieldName: string) => (value: string) => {

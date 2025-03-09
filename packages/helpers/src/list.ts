@@ -8,4 +8,4 @@ export const groupList = (names: string[]) => {
 
 const formatter = new Intl.ListFormat('ru', { style: 'long', type: 'conjunction' })
 
-export const formateList = (list?: string[] | null): string => (list ? formatter.format(list) : '')
+export const formateList = (list: string[]): string => formatter.format(list)

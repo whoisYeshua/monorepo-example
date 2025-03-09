@@ -3,17 +3,36 @@ const path = require('node:path')
 const { mergeDeepLeft } = require('ramda')
 
 /**
- * Возвращает абсолютный путь до файла относительно папки пакета `jest-config`
- * @param {string} filePath Относительный путь к файлу от папки пакета `jest-config`
+ * Returns the absolute path to the file relative to the `jest-config` package folder
+ * @param {string} filePath Relative path to the file from the `jest-config` package folder
  * @returns {string}
  */
 const fromJestConfigPackageRoot = (filePath) => path.join(__dirname, filePath)
 
 /** @type {import('jest').Config} */
 const sharedConfig = {
-	testEnvironment: 'jsdom',
+	collectCoverage: false,
+	collectCoverageFrom: ['<rootDir>/src/**/*.(ts|tsx)'],
+	coverageDirectory: 'coverage',
+	coveragePathIgnorePatterns: [
+		'<rootDir>/src/api',
+		'<rootDir>/src/constants',
+		'<rootDir>/src/mocks',
+		'<rootDir>/src/models',
+		'<rootDir>/src/store/*.ts',
+		'<rootDir>/src/api',
+		'<rootDir>/src/*.tsx',
+		'<rootDir>/src/*.ts',
+		'index.ts',
+		'renderer.tsx',
+		'\\.d\\.ts',
+	],
+	coverageReporters: ['lcov', 'json', 'text'],
+	coverageProvider: 'v8',
+	// Env
+	testEnvironment: 'jest-fixed-jsdom',
 	transform: {
-		'^.+\\.tsx?$': [
+		'^.+\\.[jt]sx?$': [
 			'@swc/jest',
 			{
 				jsc: {
@@ -26,6 +45,13 @@ const sharedConfig = {
 						react: {
 							runtime: 'automatic',
 						},
+						optimizer: {
+							globals: {
+								vars: {
+									'import.meta.env': 'process.env',
+								},
+							},
+						},
 					},
 				},
 			},
@@ -37,8 +63,8 @@ const sharedConfig = {
 }
 
 /**
- * Мерж пакетного Jest-конфига с базовым (в Jest нет встроенного механизма наследования конфигов)
- * @param {import('jest').Config} packageConfig Jest-конфиг пакета
+ * Merges package Jest config with the base config (Jest doesn't have a built-in config inheritance mechanism)
+ * @param {import('jest').Config} packageConfig Package Jest config
  */
 const mergeWithBase = (packageConfig) => mergeDeepLeft(packageConfig, sharedConfig)
 
