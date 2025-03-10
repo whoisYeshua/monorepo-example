@@ -20,6 +20,7 @@
 		"esModuleInterop": false,
 		"forceConsistentCasingInFileNames": true,
 		"verbatimModuleSyntax": true,
+		"erasableSyntaxOnly": true, // why we use this setting: https://gist.github.com/Akiyamka/de16fc1f887e187258b657555f54506b
 
 		/* Type Checking */
 		"strict": true,

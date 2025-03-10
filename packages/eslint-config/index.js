@@ -30,15 +30,6 @@ module.exports = {
 		},
 	},
 	rules: {
-		'no-restricted-syntax': [
-			'error',
-			{
-				selector: 'TSEnumDeclaration',
-				message:
-					'Why we do not use enum: https://gist.github.com/Akiyamka/de16fc1f887e187258b657555f54506b',
-			},
-		],
-
 		// This rule warns ESLint directive (especially for disable directives) comments without description
 		// https://eslint-community.github.io/eslint-plugin-eslint-comments/rules/require-description.html
 		'@eslint-community/eslint-comments/require-description': ['error', { ignore: [] }],
