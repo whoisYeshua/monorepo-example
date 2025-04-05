@@ -17,8 +17,9 @@ interface UiProviderProps {
 	prefix?: string
 	children: ReactNode | ReactNode[]
 }
+
 export const UiProvider = memo(({ children, prefix = DEFAULT_KEY }: UiProviderProps) => {
-	const cache = useMemo(() => createCache({ key: prefix }), [prefix])
+	const cache = useMemo(() => createCache({ key: prefix, stylisPlugins: [] }), [prefix])
 	const config = useMemo(() => defineConfig({ cssVarsPrefix: prefix }), [prefix])
 	const resultConfig = useMemo(() => mergeConfigs(defaultConfig, config), [config])
 	const system = useMemo(() => createSystem(resultConfig), [resultConfig])

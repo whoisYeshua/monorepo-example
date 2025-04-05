@@ -1,13 +1,13 @@
 // @ts-check
-const path = require('node:path')
-const { mergeDeepLeft } = require('ramda')
+import path from 'node:path'
+import { mergeDeepLeft } from 'ramda'
 
 /**
  * Returns the absolute path to the file relative to the `jest-config` package folder
  * @param {string} filePath Relative path to the file from the `jest-config` package folder
  * @returns {string}
  */
-const fromJestConfigPackageRoot = (filePath) => path.join(__dirname, filePath)
+const fromJestConfigPackageRoot = (filePath) => path.join(import.meta.dirname, filePath)
 
 /** @type {import('jest').Config} */
 const sharedConfig = {
@@ -68,4 +68,4 @@ const sharedConfig = {
  */
 const mergeWithBase = (packageConfig) => mergeDeepLeft(packageConfig, sharedConfig)
 
-module.exports = { sharedConfig, mergeWithBase }
+export { sharedConfig, mergeWithBase }

@@ -2,7 +2,8 @@
 	"name": "@monorepo-example/eslint-config",
 	"version": "1.0.0",
 	"description": "Common ESLint config for monorepo example",
-	"main": "index.js",
+	"type": "commonjs",
+	"exports": "./index.js",
 	"scripts": {
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
@@ -13,14 +14,14 @@
 	},
 	"devDependencies": {
 		"@eslint-community/eslint-plugin-eslint-comments": "4.4.1",
-		"@typescript-eslint/eslint-plugin": "8.26.0",
-		"@typescript-eslint/parser": "8.26.0",
+		"@typescript-eslint/eslint-plugin": "8.29.0",
+		"@typescript-eslint/parser": "8.29.0",
 		"eslint": "8.57.1",
 		"eslint-config-airbnb-base": "15.0.0",
 		"eslint-config-prettier": "10.1.1",
-		"eslint-import-resolver-typescript": "3.8.3",
+		"eslint-import-resolver-typescript": "4.3.1",
 		"eslint-plugin-import": "2.31.0",
-		"eslint-plugin-react": "7.37.4",
+		"eslint-plugin-react": "7.37.5",
 		"eslint-plugin-react-hooks": "5.2.0",
 		"eslint-plugin-react-refresh": "0.4.19",
 		"eslint-plugin-unicorn": "56.0.0"

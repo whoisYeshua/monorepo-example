@@ -66,4 +66,4 @@ const pathsToModuleNameMapper = (mapping, { prefix = '' } = {}) => {
 	return jestMap
 }
 
-module.exports = pathsToModuleNameMapper
+export default pathsToModuleNameMapper

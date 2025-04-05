@@ -1,5 +1,5 @@
 module.exports = {
-	ignorePatterns: ['node_modules', 'dist', 'public', 'coverage', '.eslintrc.js'],
+	ignorePatterns: ['node_modules', 'dist', 'public', 'coverage', '.eslintrc.cjs'],
 	env: {
 		browser: true,
 		es2024: true,

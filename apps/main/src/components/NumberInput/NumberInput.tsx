@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NumberInput as ChakraNumberInput } from '@monorepo-example/ui'
+import { NumberInput as ChakraNumberInput, type NumberInputRootProps } from '@monorepo-example/ui'
 
 interface NumberInputProps {
 	value?: number | null
@@ -9,14 +9,18 @@ interface NumberInputProps {
 export const NumberInput = ({ value, onChange }: NumberInputProps) => {
 	const [inputValue, setInputValue] = useState(value ?? null)
 
-	const handleChange = ({ valueAsNumber }: { value: string; valueAsNumber: number }) => {
+	const handleChange: NumberInputRootProps['onValueChange'] = ({ valueAsNumber }) => {
 		const parsedValue = Number.isNaN(valueAsNumber) ? null : valueAsNumber
 		setInputValue(parsedValue)
 		onChange?.(parsedValue)
 	}
 
 	return (
-		<ChakraNumberInput.Root value={inputValue} width="200px" onValueChange={handleChange}>
+		<ChakraNumberInput.Root
+			value={inputValue === null ? undefined : String(inputValue)}
+			width="200px"
+			onValueChange={handleChange}
+		>
 			<ChakraNumberInput.Input />
 		</ChakraNumberInput.Root>
 	)

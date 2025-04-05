@@ -1,12 +1,12 @@
 import { UiProvider } from '@monorepo-example/ui'
 
 import { Topbar } from '$components'
-import { First } from '$pages'
+import { Home } from '$pages'
 
 const App = () => (
 	<UiProvider>
 		<Topbar />
-		<First />
+		<Home />
 	</UiProvider>
 )
 

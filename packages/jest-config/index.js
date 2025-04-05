@@ -1,4 +1,4 @@
-const base = require('./base')
-const pathsToModuleNameMapper = require('./pathsToModuleNameMapper')
+import { sharedConfig, mergeWithBase } from './base.js'
+import pathsToModuleNameMapper from './pathsToModuleNameMapper.js'
 
-module.exports = { ...base, pathsToModuleNameMapper }
+export { sharedConfig, mergeWithBase, pathsToModuleNameMapper }

@@ -1,12 +1,12 @@
 {
 	"compilerOptions": {
 		"composite": true,
-		"moduleResolution": "node",
-		"module": "commonjs",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
 		"target": "ESNext",
 		"resolvesonModule": true,
 		"strict": true,
 		"types": ["@types/node"]
 	},
-	"include": ["vite.config.mts", "jest.config.js"]
+	"include": ["vite.config.ts", "jest.config.js"]
 }

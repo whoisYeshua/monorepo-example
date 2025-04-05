@@ -2,7 +2,8 @@
 	"name": "@monorepo-example/ui",
 	"version": "1.0.0",
 	"description": "Common UI components for apps",
-	"main": "src/index.ts",
+	"type": "module",
+	"exports": "./src/index.ts",
 	"sideEffects": false,
 	"scripts": {
 		"dev": "storybook dev --port 4123",
@@ -21,25 +22,25 @@
 		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
-		"@chakra-ui/react": "3.11.0",
+		"@chakra-ui/react": "3.15.0",
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
-		"@storybook/addon-actions": "8.6.4",
-		"@storybook/addon-essentials": "8.6.4",
-		"@storybook/blocks": "8.6.4",
-		"@storybook/react": "8.6.4",
-		"@storybook/react-vite": "8.6.4",
-		"next-themes": "0.4.4",
-		"react": "19.0.0",
-		"react-dom": "19.0.0",
+		"@storybook/addon-actions": "8.6.12",
+		"@storybook/addon-essentials": "8.6.12",
+		"@storybook/blocks": "8.6.12",
+		"@storybook/react": "8.6.12",
+		"@storybook/react-vite": "8.6.12",
+		"next-themes": "0.4.6",
+		"react": "19.1.0",
+		"react-dom": "19.1.0",
 		"react-icons": "5.5.0",
-		"storybook": "8.6.4"
+		"storybook": "8.6.12"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@types/react": "19.0.10",
-		"@types/react-dom": "19.0.4"
+		"@types/react": "19.1.0",
+		"@types/react-dom": "19.1.1"
 	}
 }

@@ -2,6 +2,12 @@
 	"name": "@monorepo-example/tsconfig",
 	"version": "1.0.0",
 	"description": "Common Typescript config for monorepo-example",
+	"type": "module",
+	"exports": {
+		"./tsconfig.base.json": "./tsconfig.base.json",
+		"./global": "./global.d.ts",
+		"./ts-reset": "./ts-reset.d.ts"
+	},
 	"scripts": {
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",

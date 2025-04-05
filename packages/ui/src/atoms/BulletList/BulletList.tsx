@@ -9,7 +9,7 @@ interface BulletListProps {
 export const BulletList = memo(({ list }: BulletListProps) => {
 	const groupedList = groupList(list)
 
-	if (groupList.length === 0) return 'Empty List' as unknown as React.ReactElement
+	if (groupList.length === 0) return 'Empty List'
 
 	return (
 		<List.Root listStyleType="disc">

@@ -1,19 +1,18 @@
-/* eslint-disable @typescript-eslint/no-require-imports -- CJS file */
 // @ts-check
-const path = require('node:path')
-const { mergeWithBase, pathsToModuleNameMapper } = require('@monorepo-example/jest-config')
+import path from 'node:path'
+import { mergeWithBase, pathsToModuleNameMapper } from '@monorepo-example/jest-config'
 
-const { name } = require('./package.json')
-const { compilerOptions } = require('./tsconfig.json')
+import packageJson from './package.json' with { type: 'json' }
+import tsConfig from './tsconfig.json' with { type: 'json' }
 
 /** @type {import('jest').Config} */
 const packageConfig = {
-	displayName: name,
-	moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-		prefix: path.join('<rootDir>', compilerOptions.baseUrl),
+	displayName: packageJson.name,
+	moduleNameMapper: pathsToModuleNameMapper(tsConfig.compilerOptions.paths, {
+		prefix: path.join('<rootDir>', tsConfig.compilerOptions.baseUrl),
 	}),
 }
 
 const config = mergeWithBase(packageConfig)
 
-module.exports = config
+export default config

@@ -10,6 +10,6 @@ export const Topbar = () => (
 		h="80px"
 		justify="center"
 	>
-		<Heading size="2xl">This is h1 title</Heading>
+		<Heading size="2xl">This is title</Heading>
 	</Flex>
 )

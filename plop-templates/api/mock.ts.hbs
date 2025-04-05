@@ -5,7 +5,7 @@ import { BACKEND_PATH } from '$constants'
 import { mock{{pascalCase httpMethod}}{{pascalCase name}}Data } from './mock{{pascalCase name}}Data'
 
 const mock{{pascalCase httpMethod}}{{pascalCase name}} = rest.{{lowerCase httpMethod}}(
-  `${BACKEND_PATH}/v1/{{kebabCase urlPath}}`,
+  `${BACKEND_PATH}/{{kebabCase urlPath}}`,
   async (_req, res, ctx) => {
     const body = mock{{pascalCase httpMethod}}{{pascalCase name}}Data
 

@@ -6,6 +6,7 @@ const config: StorybookConfig = {
 		name: '@storybook/react-vite',
 		options: {},
 	},
+	core: { disableTelemetry: true },
 	addons: ['@storybook/addon-essentials', '@storybook/addon-actions'],
 }
 export default config

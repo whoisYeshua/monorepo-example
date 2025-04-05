@@ -1,1 +1,1 @@
-export const BACKEND_PATH = 'back'
+export const BACKEND_PATH = 'api'

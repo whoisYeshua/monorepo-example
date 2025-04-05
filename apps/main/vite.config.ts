@@ -10,9 +10,20 @@ const targetApi =
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react(), tsconfigPaths()],
+	build: {
+		modulePreload: { polyfill: false },
+		chunkSizeWarningLimit: 700,
+		rollupOptions: {
+			output: { manualChunks: (id) => (id.includes('node_modules') ? 'vendor' : undefined) },
+		},
+	},
 	server: {
 		proxy: {
-			'/back': targetApi,
+			'/api': {
+				target: targetApi,
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/api/, ''),
+			},
 		},
 	},
 })

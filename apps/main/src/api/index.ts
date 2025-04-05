@@ -1,2 +1,2 @@
 /* PLOP_INJECT_REEXPORT */
-export * from './post'
+export * from './posts'

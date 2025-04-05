@@ -1,1 +1,0 @@
-export { mockPost } from './mockPost'

@@ -1,28 +1,19 @@
 import { useState, memo } from 'react'
-import { Button, BulletList, Center, Flex, Heading } from '@monorepo-example/ui'
+import { Button, Center, Flex, Heading } from '@monorepo-example/ui'
 
+import { getPosts } from '$api'
 import { NumberInput } from '$components'
 
-export const First = memo(() => {
+import { Posts } from './Posts'
+
+export const Home = memo(() => {
+	// eslint-disable-next-line react/hook-use-state -- not have a setter, used just for initial value
+	const [postsPromise] = useState(() => getPosts())
 	const [count, setCount] = useState(1)
 
 	const handleClick = () => {
 		setCount((prev) => ++prev)
 	}
-
-	const list = [
-		'Andy',
-		'Bobby',
-		'Ash',
-		'Braun',
-		'Ciri',
-		'Yanix',
-		'Zod',
-		'Geralt',
-		'Grimm',
-		'Skrillx',
-		'Marsh',
-	]
 
 	return (
 		<Center as="main" py="16px">
@@ -30,12 +21,10 @@ export const First = memo(() => {
 				<Heading>Main app</Heading>
 				<Button onClick={handleClick}>Count: {count}</Button>
 				<NumberInput />
-				<div>
-					<BulletList list={list} />
-				</div>
+				<Posts postsPromise={postsPromise} />
 			</Flex>
 		</Center>
 	)
 })
 
-First.displayName = 'First'
+Home.displayName = 'Home'
