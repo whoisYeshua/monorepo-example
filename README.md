@@ -145,6 +145,12 @@ npm run build:widget
   npm run lint:ts
   ```
 
+  Check the project with _publint_ for non-compliance with the package.json rules. Will not change the checked files:
+
+  ```bash
+  npm run lint:package
+  ```
+
   ⭐ Run unit tests on the project:
 
   ```bash

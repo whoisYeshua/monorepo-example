@@ -34,6 +34,7 @@
 		"lint:ts": {
 			"dependsOn": ["^lint:ts"]
 		},
+		"lint:package": {},
 		"test": {
 			"dependsOn": ["^test"]
 		},

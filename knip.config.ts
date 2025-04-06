@@ -1,5 +1,5 @@
 import { KnipConfig } from 'knip'
-const IGNORE_LIST = ['turbo/**', '.lintstagedrc.json', '.eslintrc.js', '**/package.json']
+const IGNORE_LIST = ['turbo/**', '.lintstagedrc.json', '.eslintrc.cjs', '**/package.json']
 
 const config: KnipConfig = {
 	// unlisted - these are transitive dependencies, from our other packages
@@ -10,12 +10,7 @@ const config: KnipConfig = {
 		'packages/tsconfig',
 		'packages/eslint-config',
 	],
-	ignoreDependencies: [
-		'@turbo/gen',
-		'@swc/jest',
-		'jest-environment-jsdom',
-		'@testing-library/jest-dom',
-	],
+	ignoreDependencies: ['@turbo/gen', '@swc/jest', 'jest-fixed-jsdom', '@testing-library/jest-dom'],
 	workspaces: {
 		'apps/*': {
 			entry: ['src/index.tsx', 'src/mocks/browser.ts'],

@@ -7,8 +7,9 @@
 	"scripts": {
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
-		"lint": "npm run lint:prettier",
+		"lint": "npm run lint:prettier && npm run lint:package",
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
+		"lint:package": "publint",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:prettier": "prettier \"./index.js\" --loglevel debug --ignore-path ../../.prettierignore"
 	},

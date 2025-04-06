@@ -1,6 +1,6 @@
 import { BACKEND_PATH } from '$constants'
 
-export type QueryParams = Record<string, string | number | boolean | bigint>
+type QueryParams = Record<string, string | number | boolean | bigint>
 
 type PathSegments<Path extends string> = Path extends `${infer SegmentA}/${infer SegmentB}`
 	? ParamOnly<SegmentA> | PathSegments<SegmentB>

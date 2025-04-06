@@ -10,10 +10,11 @@
 		"format": "npm run format:eslint && npm run format:prettier",
 		"format:eslint": "npm run lint:eslint -- --fix",
 		"format:prettier": "npm run lint:prettier -- --write",
-		"lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts",
+		"lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts && npm run lint:package",
 		"lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit",
+		"lint:package": "publint",
 		"test": "jest",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
@@ -30,16 +31,16 @@
 		"@storybook/blocks": "8.6.12",
 		"@storybook/react": "8.6.12",
 		"@storybook/react-vite": "8.6.12",
-		"next-themes": "0.4.6",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
-		"react-icons": "5.5.0",
 		"storybook": "8.6.12"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/tsconfig": "*",
+		"@testing-library/react": "16.3.0",
+		"@testing-library/user-event": "14.6.1",
 		"@types/react": "19.1.0",
 		"@types/react-dom": "19.1.1"
 	}
