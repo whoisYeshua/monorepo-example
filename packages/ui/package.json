@@ -18,6 +18,7 @@
 		"test": "jest",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
+		"debug:eslint:ui": "eslint --inspect-config",
 		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug --ignore-path ../../.prettierignore",
 		"debug:ts": "tsc --showConfig",
 		"debug:jest": "jest --showConfig"
@@ -26,9 +27,8 @@
 		"@chakra-ui/react": "3.15.0",
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
-		"@storybook/addon-actions": "8.6.12",
 		"@storybook/addon-essentials": "8.6.12",
-		"@storybook/blocks": "8.6.12",
+		"@storybook/manager-api": "8.6.12",
 		"@storybook/react": "8.6.12",
 		"@storybook/react-vite": "8.6.12",
 		"react": "19.1.0",

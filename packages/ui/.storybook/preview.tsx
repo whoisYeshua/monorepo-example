@@ -1,7 +1,8 @@
-import React from 'react'
 import { UiProvider } from '../src/UiProvider'
 
-const preview = {
+import type { Preview } from '@storybook/react'
+
+const preview: Preview = {
 	decorators: [
 		(Story) => (
 			<UiProvider>

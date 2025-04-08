@@ -6,7 +6,7 @@ import { UiProvider } from './UiProvider'
 import type { RenderOptions } from '@testing-library/react'
 import type { ReactNode } from 'react'
 
-// eslint-disable-next-line react-refresh/only-export-components -- not supposed to work with the HMS because of the burden of the tests
+// eslint-disable-next-line react-refresh/only-export-components -- not supposed to work with the HMR because of the burden of the tests
 const Provider = ({ children }: { children: ReactNode }) => <UiProvider>{children}</UiProvider>
 
 export const rtlRender = (

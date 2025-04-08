@@ -1,5 +1,9 @@
-type Empty = null | undefined | void | '' | never | never[] | { [key: string]: never }
-interface INullObject {
+declare const emptyObjectSymbol: unique symbol
+interface EmptyObject {
+	[emptyObjectSymbol]?: never
+}
+type Empty = null | undefined | void | '' | never | never[] | EmptyObject
+interface NullObject {
 	valueOf(): null
 }
 
@@ -7,15 +11,13 @@ export const isEmptyArray = (variable: unknown) => Array.isArray(variable) && va
 
 export const isVoid = (
 	variable: unknown
-): variable is null | undefined | void | never | INullObject =>
+): variable is null | undefined | void | never | NullObject =>
 	variable === undefined ||
 	(typeof variable === 'object' && (variable === null || variable.valueOf() === null))
 
 export const isEmptyString = (variable: unknown) => typeof variable === 'string' && variable === ''
 
-export const isEmptyObject = (
-	variable: unknown
-): variable is { [key: string]: never } | INullObject =>
+export const isEmptyObject = (variable: unknown): variable is EmptyObject | NullObject =>
 	typeof variable === 'object' &&
 	variable !== null &&
 	((variable.constructor.prototype === Object.prototype &&

@@ -3,5 +3,6 @@
 		"types": ["@testing-library/jest-dom"]
 	},
 	"extends": "@monorepo-example/tsconfig/tsconfig.base.json",
+	"include": ["src/**/*", ".storybook/**/*", "turbo/**/*"],
 	"exclude": ["node_modules"]
 }

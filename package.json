@@ -46,7 +46,7 @@
 		"check-dependency-version-consistency": "5.0.0",
 		"cross-env": "7.0.3",
 		"husky": "9.1.7",
-		"knip": "5.46.5",
+		"knip": "5.47.0",
 		"lint-staged": "15.5.0",
 		"prettier": "3.5.3",
 		"publint": "0.3.10",

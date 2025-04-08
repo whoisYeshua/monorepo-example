@@ -7,6 +7,6 @@ const config: StorybookConfig = {
 		options: {},
 	},
 	core: { disableTelemetry: true },
-	addons: ['@storybook/addon-essentials', '@storybook/addon-actions'],
+	addons: ['@storybook/addon-essentials'],
 }
 export default config

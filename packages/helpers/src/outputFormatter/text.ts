@@ -36,7 +36,7 @@ export const replaceForbiddenChars = (fileName: string, replaceString = ' ') =>
  * @param separator - Separator used when joining strings. Space by default.
  * @returns Joined string with applied separator
  */
-export const getSeparatedText = (strings: Array<string | null | undefined>, separator = ' ') =>
+export const getSeparatedText = (strings: (string | null | undefined)[], separator = ' ') =>
 	strings.filter((string) => isNotEmpty(string)).join(separator)
 
 /** Replaces HTML Entity non-breaking space (&nbsp;) with regular spaces */

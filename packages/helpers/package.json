@@ -16,6 +16,7 @@
 		"test": "jest",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
+		"debug:eslint:ui": "eslint --inspect-config",
 		"debug:prettier": "prettier \"./src/index.ts\" --loglevel debug --ignore-path ../../.prettierignore",
 		"debug:ts": "tsc --showConfig",
 		"debug:jest": "jest --showConfig"

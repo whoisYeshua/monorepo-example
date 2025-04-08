@@ -10,7 +10,7 @@ type ParamOnly<Segment extends string> = Segment extends `$${infer Param}` ? Par
 
 type RouteParams<Path extends string> = Record<PathSegments<Path>, unknown>
 
-type DefaultOptions = {
+interface DefaultOptions {
 	queryParams?: QueryParams
 }
 
