@@ -24,7 +24,7 @@
 		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
-		"@chakra-ui/react": "3.15.0",
+		"@chakra-ui/react": "3.15.1",
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
 		"@storybook/addon-essentials": "8.6.12",
