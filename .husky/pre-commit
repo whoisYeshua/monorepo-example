@@ -1,2 +1,2 @@
-npx lint-staged
-npx check-dependency-version-consistency
+lint-staged
+check-dependency-version-consistency
