@@ -6,9 +6,21 @@ const config = [
 	{
 		name: 'types-monorepo-example',
 		rules: {
+			/* import type rules */
+
 			// Enforce consistent usage of type imports
 			// https://typescript-eslint.io/rules/consistent-type-imports
 			'@typescript-eslint/consistent-type-imports': 'warn',
+
+			// Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers
+			// https://typescript-eslint.io/rules/no-import-type-side-effects/
+			'@typescript-eslint/no-import-type-side-effects': 'error',
+
+			// mark an import as a type-only import by adding a "kind" marker to the import (forcing a dedicated import line for types, not an inline one)
+			// https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md
+			'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+
+			/* rest type aware rules */
 
 			// Require that function overload signatures be consecutive
 			// https://typescript-eslint.io/rules/adjacent-overload-signatures

@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { NumberInput as ChakraNumberInput, type NumberInputRootProps } from '@monorepo-example/ui'
+import { NumberInput as ChakraNumberInput } from '@monorepo-example/ui'
+
+import type { NumberInputRootProps } from '@monorepo-example/ui'
 
 interface NumberInputProps {
 	value?: number | null
