@@ -42,14 +42,14 @@
 	},
 	"devDependencies": {
 		"@turbo/gen": "2.5.0",
-		"@types/node": "22.14.0",
+		"@types/node": "22.14.1",
 		"check-dependency-version-consistency": "5.0.0",
 		"cross-env": "7.0.3",
 		"husky": "9.1.7",
-		"knip": "5.47.0",
-		"lint-staged": "15.5.0",
+		"knip": "5.50.2",
+		"lint-staged": "15.5.1",
 		"prettier": "3.5.3",
-		"publint": "0.3.10",
+		"publint": "0.3.11",
 		"rimraf": "6.0.1",
 		"turbo": "2.5.0",
 		"typescript": "5.8.3"

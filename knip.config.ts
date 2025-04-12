@@ -4,13 +4,13 @@ const IGNORE_LIST = ['turbo/**', '.lintstagedrc.json', '.eslintrc.cjs', '**/pack
 const config: KnipConfig = {
 	// unlisted - these are transitive dependencies, from our other packages
 	exclude: ['unlisted'],
-	ignoreWorkspaces: [
-		'plop-templates',
-		'packages/jest-config',
-		'packages/tsconfig',
-		'packages/eslint-config',
+	ignoreDependencies: [
+		'@turbo/gen',
+		'@swc/jest',
+		'jest-fixed-jsdom',
+		'@testing-library/jest-dom',
+		'check-dependency-version-consistency',
 	],
-	ignoreDependencies: ['@turbo/gen', '@swc/jest', 'jest-fixed-jsdom', '@testing-library/jest-dom'],
 	workspaces: {
 		'apps/*': {
 			entry: ['src/index.tsx', 'src/mocks/browser.ts'],
