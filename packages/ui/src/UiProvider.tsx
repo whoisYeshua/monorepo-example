@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies -- listed inside @emotion/react deps */
-import { memo, type ReactNode } from 'react'
+import { memo } from 'react'
 import {
 	ChakraProvider,
 	createSystem,
@@ -9,6 +9,8 @@ import {
 } from '@chakra-ui/react'
 import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
+
+import type { ReactNode } from 'react'
 
 const DEFAULT_KEY = 'monorepo-example'
 
