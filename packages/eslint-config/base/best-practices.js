@@ -18,12 +18,7 @@ const config = [
 			// https://eslint.org/docs/rules/class-methods-use-this
 			// https://typescript-eslint.io/rules/class-methods-use-this/
 			'class-methods-use-this': 'off',
-			'@typescript-eslint/class-methods-use-this': [
-				'error',
-				{
-					exceptMethods: [],
-				},
-			],
+			'@typescript-eslint/class-methods-use-this': 'error',
 
 			// require return statements to either always or never specify values
 			// https://eslint.org/docs/rules/consistent-return
@@ -138,7 +133,7 @@ const config = [
 
 			// disallow creation of functions within loops
 			// https://eslint.org/docs/rules/no-loop-func
-			// https://typescript-eslint.io/rules/no-loop-func/
+			// https://typescript-eslint.io/rules/no-loop-func/ (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/04/eslint-v9.25.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'no-loop-func': 'off',
 			'@typescript-eslint/no-loop-func': 'error',
 
@@ -241,16 +236,9 @@ const config = [
 
 			// disallow usage of expressions in statement position
 			// https://eslint.org/docs/rules/no-unused-expressions
-			// https://typescript-eslint.io/rules/no-unused-expressions/
+			// https://typescript-eslint.io/rules/no-unused-expressions/ (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/04/eslint-v9.25.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'no-unused-expressions': 'off',
-			'@typescript-eslint/no-unused-expressions': [
-				'error',
-				{
-					allowShortCircuit: false,
-					allowTernary: false,
-					allowTaggedTemplates: false,
-				},
-			],
+			'@typescript-eslint/no-unused-expressions': 'error',
 
 			// disallow unused labels
 			// https://eslint.org/docs/rules/no-unused-labels

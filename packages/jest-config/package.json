@@ -14,8 +14,8 @@
 		"debug:prettier": "prettier \"./tsconfig.base.json\" --loglevel debug --ignore-path ../../.prettierignore"
 	},
 	"devDependencies": {
-		"@swc/core": "1.11.20",
-		"@swc/jest": "0.2.36",
+		"@swc/core": "1.11.24",
+		"@swc/jest": "0.2.38",
 		"@testing-library/jest-dom": "6.6.3",
 		"@types/jest": "29.5.14",
 		"@types/ramda": "0.30.2",

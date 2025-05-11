@@ -118,7 +118,7 @@ const config = [
 
 			// disallow shadowing of names such as arguments
 			// https://eslint.org/docs/latest/rules/no-shadow-restricted-names
-			'no-shadow-restricted-names': 'error',
+			'no-shadow-restricted-names': ['error', { reportGlobalThis: true }],
 
 			// disallow use of undefined when initializing variables
 			// https://eslint.org/docs/latest/rules/no-undef-init
