@@ -113,6 +113,7 @@ const config = [
 
 			// disallow declaration of variables already declared in the outer scope
 			// https://eslint.org/docs/latest/rules/no-shadow
+			// https://typescript-eslint.io/rules/no-shadow/ (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/05/eslint-v9.28.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'no-shadow': 'off',
 			'@typescript-eslint/no-shadow': 'error',
 
@@ -124,7 +125,7 @@ const config = [
 			// https://eslint.org/docs/latest/rules/no-undef-init
 			'no-undef-init': 'error',
 
-			// The `@typescript-eslint/naming-convention` rule allows `leadingUnderscore` and `trailingUnderscore` settings. However, the existing `no-underscore-dangle` rule already takes care of this.
+			// This rule allows `leadingUnderscore` and `trailingUnderscore` settings. However, the existing `no-underscore-dangle` rule already takes care of this.
 			// https://typescript-eslint.io/rules/naming-convention
 			'@typescript-eslint/naming-convention': [
 				'error',

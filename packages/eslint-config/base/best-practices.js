@@ -16,7 +16,7 @@ const config = [
 
 			// enforce that class methods use "this" (The base rule works fine with Typescript, but the Typescript version has additional options)
 			// https://eslint.org/docs/rules/class-methods-use-this
-			// https://typescript-eslint.io/rules/class-methods-use-this/
+			// https://typescript-eslint.io/rules/class-methods-use-this/ (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/03/eslint-v9.23.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'class-methods-use-this': 'off',
 			'@typescript-eslint/class-methods-use-this': 'error',
 
@@ -34,7 +34,7 @@ const config = [
 
 			// Enforce default parameters to be last
 			// https://eslint.org/docs/rules/default-param-last
-			// https://typescript-eslint.io/rules/default-param-last/
+			// https://typescript-eslint.io/rules/default-param-last/ (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/03/eslint-v9.23.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'default-param-last': 'off',
 			'@typescript-eslint/default-param-last': 'error',
 
@@ -82,7 +82,7 @@ const config = [
 
 			// disallow empty functions, except for standalone funcs/arrows
 			// https://eslint.org/docs/rules/no-empty-function
-			// https://typescript-eslint.io/rules/no-empty-function/
+			// https://typescript-eslint.io/rules/no-empty-function/ (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/04/eslint-v9.25.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'no-empty-function': 'off',
 			'@typescript-eslint/no-empty-function': [
 				'error',
@@ -208,9 +208,7 @@ const config = [
 			'no-return-assign': ['error', 'always'],
 
 			// disallow redundant `return await`
-			// https://eslint.org/docs/rules/no-return-await
 			// https://typescript-eslint.io/rules/return-await/
-			'no-return-await': 'off',
 			'@typescript-eslint/return-await': ['error', 'in-try-catch'],
 
 			// disallow use of `javascript:` urls.
@@ -270,7 +268,7 @@ const config = [
 
 			// disallow array constructors
 			// https://eslint.org/docs/latest/rules/no-array-constructor
-			// https://typescript-eslint.io/rules/no-array-constructor
+			// https://typescript-eslint.io/rules/no-array-constructor (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/04/eslint-v9.24.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'no-array-constructor': 'off',
 			'@typescript-eslint/no-array-constructor': 'error',
 
@@ -326,7 +324,7 @@ const config = [
 
 			// disallow unnecessary constructor
 			// https://eslint.org/docs/rules/no-useless-constructor
-			// https://typescript-eslint.io/rules/no-useless-constructor/
+			// https://typescript-eslint.io/rules/no-useless-constructor/ (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/03/eslint-v9.23.0-released/, we are waiting for `@typescript-eslint` rule deprecation)
 			'no-useless-constructor': 'off',
 			'@typescript-eslint/no-useless-constructor': 'error',
 
