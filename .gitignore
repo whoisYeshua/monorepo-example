@@ -6,7 +6,6 @@ dist
 
 # code editors
 .idea
-.vscode
 
 # misc
 .DS_Store

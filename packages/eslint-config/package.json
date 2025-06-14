@@ -14,13 +14,13 @@
 		"debug:prettier": "prettier \"./index.js\" --loglevel debug --ignore-path ../../.prettierignore"
 	},
 	"devDependencies": {
-		"@eslint/js": "9.28.0",
+		"@eslint/js": "9.29.0",
 		"@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
-		"typescript-eslint": "8.33.1",
+		"typescript-eslint": "8.34.0",
 		"globals": "16.2.0",
-		"eslint": "9.28.0",
+		"eslint": "9.29.0",
 		"eslint-config-prettier": "10.1.5",
-		"eslint-import-resolver-typescript": "4.4.2",
+		"eslint-import-resolver-typescript": "4.4.3",
 		"eslint-plugin-import": "2.31.0",
 		"eslint-plugin-react": "7.37.5",
 		"eslint-plugin-react-hooks": "5.2.0",

@@ -1,0 +1,22 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "jest.useJest30": true,
+
+  "jest.runMode": "on-demand",
+  "jest.virtualFolders": [
+    {
+      "rootPath": "apps/main",
+      "name": "Main app"
+    },
+    {
+      "rootPath": "packages/helpers",
+      "name": "Helpers package"
+    },
+    {
+      "rootPath": "packages/ui",
+      "name": "UI package"
+    },
+    
+  ]
+  
+}
