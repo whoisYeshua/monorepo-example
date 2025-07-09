@@ -1,7 +1,6 @@
 // @ts-check
 import jseslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
-// @ts-expect-error -- no d.ts files
 import importPlugin from 'eslint-plugin-import'
 
 import typesConfig from './types.js'
@@ -11,10 +10,13 @@ import variablesConfig from './variables.js'
 import importsConfig from './imports.js'
 
 /** @type {import('eslint').Linter.Config[]} */
+// @ts-expect-error - TypeScript-ESLint Config type is incompatible with ESLint's native Linter.Config type
+const tseslintConfigs = [...tseslint.configs.stylistic, ...tseslint.configs.recommended]
+
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
 	jseslint.configs.recommended,
-	...tseslint.configs.stylistic,
-	...tseslint.configs.recommended,
+	...tseslintConfigs,
 	importPlugin.flatConfigs.recommended,
 	importPlugin.flatConfigs.typescript,
 	...typesConfig,
