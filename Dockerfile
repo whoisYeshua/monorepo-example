@@ -1,7 +1,7 @@
 # Stage 1 - the build process
 
 # The as build-deps part allows us to name this part of the build process. That name can then be referred to when configuring the production environment later.
-FROM node:16.17-alpine as build
+FROM node:22.18-alpine AS build
 
 ARG MODULE
 
@@ -29,7 +29,7 @@ COPY . .
 RUN npm run build:${MODULE}
 
 # Bundle static assets with nginx stage
-FROM nginx:1.22-alpine AS static
+FROM nginx:1.29-alpine AS static
 
 ARG MODULE
 

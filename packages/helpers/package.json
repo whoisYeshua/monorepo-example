@@ -23,13 +23,13 @@
 	},
 	"dependencies": {
 		"ramda": "0.31.3",
-		"react": "19.1.0"
+		"react": "19.1.1"
 	},
 	"devDependencies": {
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@types/ramda": "0.30.2",
-		"@types/react": "19.1.8"
+		"@types/ramda": "0.31.0",
+		"@types/react": "19.1.12"
 	}
 }
