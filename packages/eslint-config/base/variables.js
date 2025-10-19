@@ -10,10 +10,6 @@ const config = [
 			// https://eslint.org/docs/rules/func-names
 			'func-names': 'warn',
 
-			// disallow modifying variables that are declared using const
-			// https://eslint.org/docs/rules/no-const-assign
-			'no-const-assign': 'error',
-
 			// require let or const instead of var
 			// https://eslint.org/docs/rules/no-var
 			'no-var': 'error',

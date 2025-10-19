@@ -7,7 +7,7 @@ import reactRefreshPlugin from 'eslint-plugin-react-refresh'
 const config = [
 	reactPlugin.configs.flat.recommended,
 	reactPlugin.configs.flat['jsx-runtime'],
-	reactHooksPlugin.configs['recommended-latest'],
+	reactHooksPlugin.configs.flat['recommended-latest'],
 	{
 		name: 'react-monorepo-example',
 		plugins: {

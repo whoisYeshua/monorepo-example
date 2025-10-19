@@ -262,10 +262,6 @@ const config = [
 			// https://eslint.org/docs/rules/no-void
 			'no-void': 'error',
 
-			// disallow use of the with statement
-			// https://eslint.org/docs/rules/no-with
-			'no-with': 'error',
-
 			// disallow array constructors
 			// https://eslint.org/docs/latest/rules/no-array-constructor
 			// https://typescript-eslint.io/rules/no-array-constructor (looks like `@typescript-eslint` version could be disabled according to https://eslint.org/blog/2025/04/eslint-v9.24.0-released/, we are waiting for `@typescript-eslint` rule deprecation)

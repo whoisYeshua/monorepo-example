@@ -70,17 +70,9 @@ const config = [
 			// https://eslint.org/docs/rules/no-extra-boolean-cast
 			'no-extra-boolean-cast': 'error',
 
-			// disallow assigning to imported bindings
-			// https://eslint.org/docs/rules/no-import-assign
-			'no-import-assign': 'error',
-
 			// disallow function or variable declarations in nested blocks
 			// https://eslint.org/docs/rules/no-inner-declarations
 			'no-inner-declarations': 'error',
-
-			// disallow new operators with global non-constructor functions
-			// https://eslint.org/docs/rules/no-new-native-nonconstructor
-			'no-new-native-nonconstructor': 'error',
 
 			// disallow invalid regular expression strings in the RegExp constructor
 			// https://eslint.org/docs/rules/no-invalid-regexp
@@ -97,10 +89,6 @@ const config = [
 			// Disallow characters which are made with multiple code points in character class syntax
 			// https://eslint.org/docs/rules/no-misleading-character-class
 			'no-misleading-character-class': 'error',
-
-			// disallow the use of object properties of the global object (Math and JSON) as functions
-			// https://eslint.org/docs/rules/no-obj-calls
-			'no-obj-calls': 'error',
 
 			// Disallow returning values from Promise executor functions
 			// https://eslint.org/docs/rules/no-promise-executor-return
@@ -134,10 +122,6 @@ const config = [
 			// disallow return/throw/break/continue inside finally blocks
 			// https://eslint.org/docs/rules/no-unsafe-finally
 			'no-unsafe-finally': 'error',
-
-			// disallow negating the left operand of relational operators
-			// https://eslint.org/docs/rules/no-unsafe-negation
-			'no-unsafe-negation': 'error',
 
 			// disallow use of optional chaining in contexts where the undefined value is not allowed
 			// https://eslint.org/docs/rules/no-unsafe-optional-chaining
