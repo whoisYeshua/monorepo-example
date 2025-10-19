@@ -28,10 +28,10 @@
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
 		"@monorepo-example/ui": "*",
-		"ramda": "0.31.3",
-		"react": "19.1.1",
-		"react-dom": "19.1.1",
-		"uuid": "11.1.0"
+		"es-toolkit": "1.40.0",
+		"react": "19.2.0",
+		"react-dom": "19.2.0",
+		"uuid": "13.0.0"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
@@ -39,13 +39,12 @@
 		"@monorepo-example/tsconfig": "*",
 		"@testing-library/react": "16.3.0",
 		"@testing-library/user-event": "14.6.1",
-		"@types/ramda": "0.31.0",
-		"@types/react": "19.1.12",
-		"@types/react-dom": "19.1.9",
+		"@types/react": "19.2.2",
+		"@types/react-dom": "19.2.2",
 		"@types/uuid": "10.0.0",
-		"@vitejs/plugin-react": "5.0.2",
-		"msw": "2.11.1",
-		"vite": "7.1.4",
+		"@vitejs/plugin-react": "5.0.4",
+		"msw": "2.11.2",
+		"vite": "7.1.10",
 		"vite-tsconfig-paths": "5.1.4"
 	},
 	"msw": {

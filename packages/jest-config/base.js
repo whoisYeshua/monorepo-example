@@ -1,6 +1,6 @@
 // @ts-check
 import path from 'node:path'
-import { mergeDeepLeft } from 'ramda'
+import { toMerged } from 'es-toolkit/object'
 
 /**
  * Returns the absolute path to the file relative to the `jest-config` package folder
@@ -66,6 +66,6 @@ const sharedConfig = {
  * Merges package Jest config with the base config (Jest doesn't have a built-in config inheritance mechanism)
  * @param {import('jest').Config} packageConfig Package Jest config
  */
-const mergeWithBase = (packageConfig) => mergeDeepLeft(packageConfig, sharedConfig)
+const mergeWithBase = (packageConfig) => toMerged(sharedConfig, packageConfig)
 
 export { sharedConfig, mergeWithBase }

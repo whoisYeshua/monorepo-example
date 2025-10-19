@@ -1,10 +1,6 @@
-import { uniq, groupBy } from 'ramda'
+import { uniq, groupBy } from 'es-toolkit/array'
 
-export const groupList = (names: string[]) => {
-	const uniqValues = uniq(names)
-	const byName = groupBy((name: string) => name.trimStart()[0])
-	return byName(uniqValues)
-}
+export const groupList = (names: string[]) => groupBy(uniq(names), (name) => name.trimStart()[0])
 
 const formatter = new Intl.ListFormat('ru', { style: 'long', type: 'conjunction' })
 

@@ -22,14 +22,13 @@
 		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
-		"ramda": "0.31.3",
-		"react": "19.1.1"
+		"es-toolkit": "1.40.0",
+		"react": "19.2.0"
 	},
 	"devDependencies": {
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@types/ramda": "0.31.0",
-		"@types/react": "19.1.12"
+		"@types/react": "19.2.2"
 	}
 }
