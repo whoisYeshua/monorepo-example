@@ -26,7 +26,7 @@
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
 		"@monorepo-example/ui": "*",
-		"es-toolkit": "1.40.0",
+		"es-toolkit": "1.41.0",
 		"react": "19.2.0",
 		"react-dom": "19.2.0",
 		"uuid": "13.0.0"
@@ -37,12 +37,12 @@
 		"@monorepo-example/tsconfig": "*",
 		"@testing-library/react": "16.3.0",
 		"@testing-library/user-event": "14.6.1",
-		"@types/react": "19.2.2",
-		"@types/react-dom": "19.2.2",
+		"@types/react": "19.2.5",
+		"@types/react-dom": "19.2.3",
 		"@types/uuid": "10.0.0",
-		"msw": "2.11.5",
-		"@vitejs/plugin-react": "5.0.4",
-		"vite": "7.1.10",
+		"msw": "2.12.2",
+		"@vitejs/plugin-react": "5.1.1",
+		"vite": "7.2.2",
 		"vite-tsconfig-paths": "5.1.4"
 	},
 	"msw": {

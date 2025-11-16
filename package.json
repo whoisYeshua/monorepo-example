@@ -41,17 +41,17 @@
 		"knip: fix": "knip --fix"
 	},
 	"devDependencies": {
-		"@turbo/gen": "2.5.8",
+		"@turbo/gen": "2.6.1",
 		"@types/node": "22.18.11",
 		"check-dependency-version-consistency": "5.0.1",
 		"cross-env": "10.1.0",
 		"husky": "9.1.7",
-		"knip": "5.66.0",
-		"lint-staged": "16.2.4",
+		"knip": "5.69.1",
+		"lint-staged": "16.2.6",
 		"prettier": "3.6.2",
-		"publint": "0.3.14",
-		"rimraf": "6.0.1",
-		"turbo": "2.5.8",
+		"publint": "0.3.15",
+		"rimraf": "6.1.0",
+		"turbo": "2.6.1",
 		"typescript": "5.9.3"
 	},
 	"packageManager": "npm@10.9.2",

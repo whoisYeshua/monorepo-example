@@ -19,7 +19,6 @@ const config: KnipConfig = {
 			jest: true,
 		},
 		'packages/*': {
-			entry: ['src/index.ts'],
 			project: ['src/**'],
 			ignore: IGNORE_LIST,
 			jest: true,

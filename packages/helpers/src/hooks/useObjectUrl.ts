@@ -15,6 +15,7 @@ export const useObjectUrl = (initialObject: File | Blob | MediaSource | null) =>
 		if (!object) return
 
 		const url = URL.createObjectURL(object)
+		// eslint-disable-next-line react-hooks/set-state-in-effect -- this was in original code
 		setObjectUrl(url)
 
 		// eslint-disable-next-line consistent-return -- return is needed for cleanup function

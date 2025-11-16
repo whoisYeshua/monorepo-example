@@ -14,13 +14,13 @@
 		"debug:prettier": "prettier \"./tsconfig.base.json\" --loglevel debug --ignore-path ../../.prettierignore"
 	},
 	"devDependencies": {
-		"@swc/core": "1.13.5",
+		"@swc/core": "1.15.2",
 		"@swc/jest": "0.2.39",
 		"@testing-library/jest-dom": "6.9.1",
 		"@types/jest": "30.0.0",
-		"es-toolkit": "1.40.0",
+		"es-toolkit": "1.41.0",
 		"jest": "30.2.0",
-		"jest-fixed-jsdom": "0.0.10",
+		"jest-fixed-jsdom": "0.0.11",
 		"jest-environment-jsdom": "30.2.0"
 	}
 }

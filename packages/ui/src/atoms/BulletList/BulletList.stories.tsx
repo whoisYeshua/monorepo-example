@@ -1,6 +1,6 @@
 import { BulletList as CommonBulletList } from './BulletList'
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 type Story = StoryObj<typeof CommonBulletList>
 
