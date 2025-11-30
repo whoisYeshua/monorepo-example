@@ -22,13 +22,13 @@
 		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
-		"es-toolkit": "1.41.0",
+		"es-toolkit": "1.42.0",
 		"react": "19.2.0"
 	},
 	"devDependencies": {
 		"@monorepo-example/jest-config": "*",
 		"@monorepo-example/eslint-config": "*",
 		"@monorepo-example/tsconfig": "*",
-		"@types/react": "19.2.5"
+		"@types/react": "19.2.7"
 	}
 }

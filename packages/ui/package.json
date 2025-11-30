@@ -24,13 +24,13 @@
 		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
-		"@chakra-ui/react": "3.29.0",
+		"@chakra-ui/react": "3.30.0",
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
-		"@storybook/react-vite": "10.0.7",
+		"@storybook/react-vite": "10.1.2",
 		"react": "19.2.0",
 		"react-dom": "19.2.0",
-		"storybook": "10.0.7"
+		"storybook": "10.1.2"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
@@ -38,7 +38,7 @@
 		"@monorepo-example/tsconfig": "*",
 		"@testing-library/react": "16.3.0",
 		"@testing-library/user-event": "14.6.1",
-		"@types/react": "19.2.5",
+		"@types/react": "19.2.7",
 		"@types/react-dom": "19.2.3"
 	}
 }
