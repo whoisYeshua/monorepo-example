@@ -193,28 +193,10 @@ npm run generate
 npm run storybook
 ```
 
-Build a dependency graph for the `build` command (debugging):
+Start Turborepo devtools for visualizing task execution and dependency graphs (debugging):
 
 ```bash
-npm run graph:build
-```
-
-Build a dependency graph for the `dev` command (debugging):
-
-```bash
-npm run graph:dev
-```
-
-Build a dependency graph for the `format` command (debugging):
-
-```bash
-npm run graph:format
-```
-
-Build a dependency graph for the `lint` command (debugging):
-
-```bash
-npm run graph:lint
+npm run devtools
 ```
 
 ### NPM Updating dependencies tips
