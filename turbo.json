@@ -1,43 +1,66 @@
 {
-	"$schema": "https://turborepo.org/schema.json",
+	"$schema": "./node_modules/turbo/schema.json",
 	"ui": "stream",
 	"tasks": {
+		"transit": {
+			"description": "Virtual dependency task that creates a dependency chain without executing any script. This enables parallel task execution across packages while ensuring correct cache invalidation when dependency source files change. Works by establishing relationships in the dependency graph without matching any actual package.json script.",
+			"dependsOn": ["^transit"]
+		},
 		"dev": {
+			"description": "Start development server with hot reload",
 			"cache": false,
 			"persistent": true
 		},
 		"dev:mock": {
+			"description": "Start development server with mocked (MSW) API responses",
 			"cache": false,
 			"persistent": true
 		},
 		"dev:local": {
+			"description": "Start development server with API proxied to local backend (localhost:8081)",
 			"cache": false,
 			"persistent": true
 		},
 		"build": {
+			"description": "Build packages for production",
+			"dependsOn": ["^build"],
 			"outputs": ["dist/**"]
 		},
 		"format": {
-			"dependsOn": ["^format"]
+			"description": "Format code with Prettier and ESLint across all packages",
+			"dependsOn": ["transit"]
 		},
-		"format:prettier": {},
+		"format:prettier": {
+			"description": "Format code using Prettier"
+		},
 		"format:eslint": {
-			"dependsOn": ["^format:eslint"]
+			"description": "Auto-fix code issues using ESLint",
+			"dependsOn": ["transit"]
 		},
 		"lint": {
-			"dependsOn": ["^lint"]
+			"description": "Run all linting checks (ESLint, Prettier, TypeScript, package.json)",
+			"dependsOn": ["transit"]
 		},
-		"lint:prettier": {},
+		"lint:prettier": {
+			"description": "Check code formatting with Prettier"
+		},
 		"lint:eslint": {
-			"dependsOn": ["^lint:eslint"]
+			"description": "Lint code using ESLint rules",
+			"dependsOn": ["transit"]
 		},
 		"lint:ts": {
-			"dependsOn": ["^lint:ts"]
+			"description": "Run TypeScript type checking",
+			"dependsOn": ["transit"]
 		},
-		"lint:package": {},
+		"lint:package": {
+			"description": "Validate package.json files for correctness"
+		},
 		"test": {
-			"dependsOn": ["^test"]
+			"description": "Run test suites across all packages",
+			"dependsOn": ["transit"]
 		},
-		"clean": {}
+		"clean": {
+			"description": "Remove build artifacts and cached files"
+		}
 	}
 }

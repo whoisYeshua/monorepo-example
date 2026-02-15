@@ -18,10 +18,10 @@
 		"build": "turbo run build",
 		"build:main": "turbo run build --filter ./apps/main",
 		"build:widget": "turbo run build --filter ./apps/widget",
-		"format": "turbo run format",
+		"format": "turbo run format:eslint format:prettier",
 		"format:eslint": "turbo run format:eslint",
 		"format:prettier": "turbo run format:prettier",
-		"lint": "turbo run lint --parallel",
+		"lint": "turbo run lint:eslint lint:prettier lint:ts lint:package",
 		"lint:eslint": "turbo run lint:eslint --affected",
 		"lint:eslint:ci": "turbo run lint:eslint -- --max-warnings 0",
 		"lint:prettier": "turbo run lint:prettier --affected",
@@ -41,7 +41,7 @@
 		"knip: fix": "knip --fix"
 	},
 	"devDependencies": {
-		"@turbo/gen": "2.6.1",
+		"@turbo/gen": "2.8.7",
 		"@types/node": "22.18.11",
 		"check-dependency-version-consistency": "5.0.1",
 		"cross-env": "10.1.0",
@@ -51,7 +51,7 @@
 		"prettier": "3.7.3",
 		"publint": "0.3.15",
 		"rimraf": "6.1.2",
-		"turbo": "2.6.1",
+		"turbo": "2.8.7",
 		"typescript": "5.9.3"
 	},
 	"packageManager": "npm@10.9.2",
