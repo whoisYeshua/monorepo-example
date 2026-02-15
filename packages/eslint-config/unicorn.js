@@ -53,6 +53,10 @@ const config = [
 			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md
 			'unicorn/expiring-todo-comments': 'off',
 
+			// Prevent usage of variables from outside the scope of isolated functions e.g. functions passed to makeSynchronous() run in worker/subprocess and cannot access outer scope. (не используем, так как очень специфичное, предпологается, что будет включаться на проекте точечно – по необходимости)
+			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/isolated-functions.md
+			'unicorn/isolated-functions': 'off',
+
 			// Improve regexes by making them shorter, consistent, and safer. (было включено на проекте с самого старта, но потом авторы unicorn его убрали из recomended, выглядит вроде логично, так что оставляем, но возможна замена на https://github.com/ota-meshi/eslint-plugin-regexp)
 			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/better-regex.md
 			'unicorn/better-regex': 'error',
