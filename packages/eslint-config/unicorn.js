@@ -57,6 +57,10 @@ const config = [
 			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/isolated-functions.md
 			'unicorn/isolated-functions': 'off',
 
+			// Prefer the simpler condition first in logical expressions (порядок условий часто намеренный — guard сначала, основная проверка потом. Автофикс может изменить поведение из-за short-circuit evaluation, поэтому вырубаем)
+			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-simple-condition-first.md
+			'unicorn/prefer-simple-condition-first': 'off',
+
 			// Improve regexes by making them shorter, consistent, and safer. (было включено на проекте с самого старта, но потом авторы unicorn его убрали из recomended, выглядит вроде логично, так что оставляем, но возможна замена на https://github.com/ota-meshi/eslint-plugin-regexp)
 			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/better-regex.md
 			'unicorn/better-regex': 'error',
