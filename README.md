@@ -229,3 +229,18 @@ npm i -w=apps/main -w=apps/widget -w=packages/helpers react@latest --legacy-peer
 
 4. `npm run clean`
 5. `npm i`
+
+### Optional: Skills and MCP setup
+
+Use these commands to add project-level AI tooling:
+
+```bash
+npx mcp-add --name chakra-ui --type stdio --command "npx -y @chakra-ui/react-mcp" --scope project
+npx mcp-add --name storybook-mcp --type http --url "http://localhost:4123/mcp" --scope project
+npx skills add https://github.com/vercel/turborepo --skill turborepo
+```
+
+Notes:
+
+- Keep Storybook running before using `storybook-mcp`, otherwise the HTTP MCP endpoint is unavailable.
+- If your Storybook MCP endpoint runs on a different port, update the `url` value accordingly.

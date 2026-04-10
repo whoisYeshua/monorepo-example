@@ -2,6 +2,10 @@
 	"mcpServers": {
 		"storybook-mcp": {
 			"url": "http://localhost:4123/mcp"
+		},
+		"chakra-ui": {
+			"command": "npx",
+			"args": ["-y", "@chakra-ui/react-mcp"]
 		}
 	}
 }
