@@ -1,3 +1,6 @@
 {
+	"compilerOptions": {
+		"types": ["jest", "node"]
+	},
 	"extends": "@monorepo-example/tsconfig/tsconfig.base.json"
 }

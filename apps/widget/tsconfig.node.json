@@ -4,9 +4,8 @@
 		"module": "ESNext",
 		"moduleResolution": "bundler",
 		"target": "ESNext",
-		"resolvesonModule": true,
 		"strict": true,
-		"types": ["@types/node"]
+		"types": ["node"]
 	},
 	"include": ["vite.config.ts", "jest.config.js", "eslint.config.js"]
 }

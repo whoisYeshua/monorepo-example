@@ -1,6 +1,5 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import tsconfigPaths from 'vite-tsconfig-paths'
 
 const targetApi =
 	process.env.VITE_API === 'local'
@@ -9,7 +8,8 @@ const targetApi =
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react(), tsconfigPaths()],
+	plugins: [react()],
+	resolve: { tsconfigPaths: true },
 	build: {
 		modulePreload: { polyfill: false },
 		chunkSizeWarningLimit: 700,
