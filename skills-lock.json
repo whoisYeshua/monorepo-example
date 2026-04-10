@@ -4,7 +4,7 @@
 		"turborepo": {
 			"source": "vercel/turborepo",
 			"sourceType": "github",
-			"computedHash": "43cdb618ec10c8369e71221ccd2c976fa77a5b0399ab74fd4c73137427ba500c"
+			"computedHash": "a3579e99274b52907d41147531370ada7645df28dabfe5ab2d244a99aa3f654e"
 		}
 	}
 }
