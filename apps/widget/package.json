@@ -24,9 +24,9 @@
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
 		"@monorepo-example/ui": "*",
-		"es-toolkit": "1.44.0",
-		"react": "19.2.4",
-		"react-dom": "19.2.4",
+		"es-toolkit": "1.45.1",
+		"react": "19.2.5",
+		"react-dom": "19.2.5",
 		"uuid": "13.0.0"
 	},
 	"devDependencies": {
@@ -38,9 +38,9 @@
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
 		"@types/uuid": "10.0.0",
-		"msw": "2.12.10",
-		"@vitejs/plugin-react": "5.1.4",
-		"vite": "7.3.1",
+		"msw": "2.13.2",
+		"@vitejs/plugin-react": "6.0.1",
+		"vite": "8.0.8",
 		"vite-tsconfig-paths": "6.1.1"
 	},
 	"msw": {

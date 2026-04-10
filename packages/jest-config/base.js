@@ -1,6 +1,6 @@
 // @ts-check
 import path from 'node:path'
-import { toMerged } from 'es-toolkit/object'
+import { defineConfig, mergeConfig } from 'jest'
 
 /**
  * Returns the absolute path to the file relative to the `jest-config` package folder
@@ -9,8 +9,7 @@ import { toMerged } from 'es-toolkit/object'
  */
 const fromJestConfigPackageRoot = (filePath) => path.join(import.meta.dirname, filePath)
 
-/** @type {import('jest').Config} */
-const sharedConfig = {
+const sharedConfig = defineConfig({
 	collectCoverage: false,
 	collectCoverageFrom: ['<rootDir>/src/**/*.(ts|tsx)'],
 	coverageDirectory: 'coverage',
@@ -32,7 +31,7 @@ const sharedConfig = {
 	// Env
 	testEnvironment: 'jest-fixed-jsdom',
 	transform: {
-		'^.+\\.[jt]sx?$': [
+		'^.+\\.[cm]?[jt]sx?$': [
 			'@swc/jest',
 			{
 				jsc: {
@@ -57,15 +56,9 @@ const sharedConfig = {
 			},
 		],
 	},
-	moduleFileExtensions: ['js', 'ts', 'tsx'],
+	moduleFileExtensions: ['js', 'mjs', 'ts', 'tsx'],
 	setupFilesAfterEnv: [fromJestConfigPackageRoot('./setupTests.ts')],
 	resetMocks: true,
-}
+})
 
-/**
- * Merges package Jest config with the base config (Jest doesn't have a built-in config inheritance mechanism)
- * @param {import('jest').Config} packageConfig Package Jest config
- */
-const mergeWithBase = (packageConfig) => toMerged(sharedConfig, packageConfig)
-
-export { sharedConfig, mergeWithBase }
+export { sharedConfig, defineConfig, mergeConfig }

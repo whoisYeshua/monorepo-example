@@ -7,5 +7,6 @@ const config: StorybookConfig = {
 		options: {},
 	},
 	core: { disableTelemetry: true },
+	addons: ['@storybook/addon-mcp'],
 }
 export default config

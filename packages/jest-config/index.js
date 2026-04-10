@@ -1,4 +1,5 @@
-import { sharedConfig, mergeWithBase } from './base.js'
+// @ts-check
+import { sharedConfig, defineConfig, mergeConfig } from './base.js'
 import pathsToModuleNameMapper from './pathsToModuleNameMapper.js'
 
-export { sharedConfig, mergeWithBase, pathsToModuleNameMapper }
+export { sharedConfig, defineConfig, mergeConfig, pathsToModuleNameMapper }

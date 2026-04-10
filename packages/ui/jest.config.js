@@ -1,13 +1,10 @@
 // @ts-check
-import { mergeWithBase } from '@monorepo-example/jest-config'
+import { defineConfig, mergeConfig, sharedConfig } from '@monorepo-example/jest-config'
 
 import packageJson from './package.json' with { type: 'json' }
 
-/** @type {import('jest').Config} */
-const packageConfig = {
+const packageConfig = defineConfig({
 	displayName: packageJson.name,
-}
+})
 
-const config = mergeWithBase(packageConfig)
-
-export default config
+export default mergeConfig(sharedConfig, packageConfig)
