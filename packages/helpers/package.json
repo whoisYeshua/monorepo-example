@@ -20,8 +20,8 @@
 		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
-		"es-toolkit": "1.45.1",
-		"react": "19.2.5"
+		"es-toolkit": "1.46.1",
+		"react": "19.2.6"
 	},
 	"devDependencies": {
 		"@monorepo-example/jest-config": "*",

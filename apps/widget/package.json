@@ -24,10 +24,10 @@
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
 		"@monorepo-example/ui": "*",
-		"es-toolkit": "1.45.1",
-		"react": "19.2.5",
-		"react-dom": "19.2.5",
-		"uuid": "13.0.0"
+		"es-toolkit": "1.46.1",
+		"react": "19.2.6",
+		"react-dom": "19.2.6",
+		"uuid": "14.0.0"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
@@ -38,9 +38,9 @@
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
 		"@types/uuid": "10.0.0",
-		"msw": "2.13.2",
+		"msw": "2.14.5",
 		"@vitejs/plugin-react": "6.0.1",
-		"vite": "8.0.8"
+		"vite": "8.0.11"
 	},
 	"msw": {
 		"workerDirectory": "public"

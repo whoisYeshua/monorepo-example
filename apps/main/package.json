@@ -14,7 +14,7 @@
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit",
 		"lint:package": "publint",
-		"test": "jest",
+		"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
 		"clean": "rimraf .turbo dist node_modules",
 		"debug:eslint": "eslint --print-config \"./src/index.tsx\" > eslint-output-config.json",
 		"debug:eslint:ui": "eslint --inspect-config",
@@ -26,10 +26,10 @@
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
 		"@monorepo-example/ui": "*",
-		"es-toolkit": "1.45.1",
-		"react": "19.2.5",
-		"react-dom": "19.2.5",
-		"uuid": "13.0.0"
+		"es-toolkit": "1.46.1",
+		"react": "19.2.6",
+		"react-dom": "19.2.6",
+		"uuid": "14.0.0"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
@@ -41,8 +41,8 @@
 		"@types/react-dom": "19.2.3",
 		"@types/uuid": "10.0.0",
 		"@vitejs/plugin-react": "6.0.1",
-		"msw": "2.13.2",
-		"vite": "8.0.8"
+		"msw": "2.14.5",
+		"vite": "8.0.11"
 	},
 	"msw": {
 		"workerDirectory": "public"

@@ -60,7 +60,8 @@
 			"dependsOn": ["transit"]
 		},
 		"clean": {
-			"description": "Remove build artifacts and cached files"
+			"description": "Remove build artifacts and cached files",
+			"cache": false
 		}
 	}
 }
