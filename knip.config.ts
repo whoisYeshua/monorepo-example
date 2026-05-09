@@ -1,4 +1,5 @@
-import { KnipConfig } from 'knip'
+import type { KnipConfig } from 'knip'
+
 const IGNORE_LIST = ['.lintstagedrc.json', '**/package.json']
 
 const config: KnipConfig = {

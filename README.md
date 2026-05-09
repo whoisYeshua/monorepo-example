@@ -19,8 +19,8 @@
 
 ## ⚠️ Requirements ⚠️
 
-- _node.js_ - install version 20.12.2 (LTS). This is required to run the builder. You can check the installed version by typing the command `node -v` in the terminal/console.
-- _npm_ - it should be installed along with _node.js_. It is required for installing modules and running scripts. You can check the installed version by typing the command `npm -v` in the terminal/console, it should be _10.5.0_.
+- _node.js_ - install version 24.14.0 (LTS). This is required to run the builder. You can check the installed version by typing the command `node -v` in the terminal/console.
+- _npm_ - it should be installed along with _node.js_. It is required for installing modules and running scripts. You can check the installed version by typing the command `npm -v` in the terminal/console, it should be _11.9.0_.
 - _git_
 
 ## Installation
