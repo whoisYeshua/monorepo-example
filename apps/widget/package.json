@@ -24,9 +24,9 @@
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
 		"@monorepo-example/ui": "*",
-		"es-toolkit": "1.46.1",
-		"react": "19.2.6",
-		"react-dom": "19.2.6",
+		"es-toolkit": "1.47.0",
+		"react": "19.2.7",
+		"react-dom": "19.2.7",
 		"uuid": "14.0.0"
 	},
 	"devDependencies": {
@@ -35,12 +35,12 @@
 		"@monorepo-example/tsconfig": "*",
 		"@testing-library/react": "16.3.2",
 		"@testing-library/user-event": "14.6.1",
-		"@types/react": "19.2.14",
+		"@types/react": "19.2.17",
 		"@types/react-dom": "19.2.3",
 		"@types/uuid": "10.0.0",
-		"msw": "2.14.5",
-		"@vitejs/plugin-react": "6.0.1",
-		"vite": "8.0.11"
+		"msw": "2.14.6",
+		"@vitejs/plugin-react": "6.0.2",
+		"vite": "8.0.16"
 	},
 	"msw": {
 		"workerDirectory": "public"

@@ -22,13 +22,13 @@
 		"debug:jest": "jest --showConfig"
 	},
 	"dependencies": {
-		"@chakra-ui/react": "3.35.0",
+		"@chakra-ui/react": "3.36.0",
 		"@emotion/react": "11.14.0",
 		"@monorepo-example/helpers": "*",
-		"@storybook/react-vite": "10.3.6",
-		"react": "19.2.6",
-		"react-dom": "19.2.6",
-		"storybook": "10.3.6"
+		"@storybook/react-vite": "10.4.4",
+		"react": "19.2.7",
+		"react-dom": "19.2.7",
+		"storybook": "10.4.4"
 	},
 	"devDependencies": {
 		"@monorepo-example/eslint-config": "*",
@@ -37,8 +37,8 @@
 		"@storybook/addon-mcp": "0.6.0",
 		"@testing-library/react": "16.3.2",
 		"@testing-library/user-event": "14.6.1",
-		"@types/react": "19.2.14",
+		"@types/react": "19.2.17",
 		"@types/react-dom": "19.2.3",
-		"eslint-plugin-storybook": "10.3.6"
+		"eslint-plugin-storybook": "10.4.4"
 	}
 }
