@@ -4,7 +4,6 @@
 		"target": "esnext",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"jsx": "react-jsx",
-		"moduleDetection": "auto",
 
 		/* Modules */
 		"module": "esnext",
@@ -16,13 +15,10 @@
 
 		/* Interop Constraints */
 		"isolatedModules": true,
-		"allowSyntheticDefaultImports": true,
-		"forceConsistentCasingInFileNames": true,
 		"verbatimModuleSyntax": true,
 		"erasableSyntaxOnly": true, // why we use this setting: https://gist.github.com/Akiyamka/de16fc1f887e187258b657555f54506b
 
 		/* Type Checking */
-		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
