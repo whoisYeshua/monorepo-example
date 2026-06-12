@@ -98,6 +98,10 @@ const config = [
 			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-match-all.md
 			'unicorn/prefer-string-match-all': 'off',
 
+			// Prefer .includes() over repeated equality comparisons (оригинальное значение в 3 слишком низкое для изменения синтаксиса)
+			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-includes-over-repeated-comparisons.md
+			'unicorn/prefer-includes-over-repeated-comparisons': ['error', { minimumComparisons: 5 }],
+
 			// Prefer switch over multiple else-if (в реально больших случаях можно юзать switch или написать какую-то map соответсвий)
 			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-switch.md
 			'unicorn/prefer-switch': ['error', { minimumCases: 5 }],
