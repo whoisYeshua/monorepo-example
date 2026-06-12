@@ -4,9 +4,10 @@
 	"description": "Common Typescript config for monorepo-example",
 	"type": "module",
 	"exports": {
-		"./tsconfig.base.json": "./tsconfig.base.json",
-		"./global": "./global.d.ts",
-		"./ts-reset": "./ts-reset.d.ts"
+		".": {
+			"types": "./index.d.ts"
+		},
+		"./tsconfig.base.json": "./tsconfig.base.json"
 	},
 	"scripts": {
 		"format:prettier": "npm run lint:prettier -- --write",

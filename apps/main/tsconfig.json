@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"types": ["jest", "@testing-library/jest-dom"],
+		"types": ["@monorepo-example/tsconfig", "jest", "@testing-library/jest-dom"],
 		"paths": {
 			"$*": ["./src/*"]
 		}

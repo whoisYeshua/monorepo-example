@@ -4,7 +4,7 @@ import { isDev } from '@monorepo-example/helpers'
 
 import App from './App'
 
-if (isDev() && import.meta.env.VITE_API === 'mock') {
+if (isDev && import.meta.env.VITE_API === 'mock') {
 	const { worker, onUnhandledRequest } = await import('./mocks/browser')
 	await worker.start({ onUnhandledRequest })
 }
