@@ -39,7 +39,7 @@
 	},
 	"devDependencies": {
 		"@turbo/gen": "2.9.18",
-		"@types/node": "24.12.3",
+		"@types/node": "24.13.2",
 		"check-dependency-version-consistency": "6.0.0",
 		"cross-env": "10.1.0",
 		"husky": "9.1.7",
